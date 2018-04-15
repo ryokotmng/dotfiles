@@ -48,6 +48,12 @@ set expandtab
 "tabのスペース設定
 set tabstop=2 shiftwidth=4 softtabstop=0
 
+"インデントの数を折畳のレベル(深さ)とする
+set foldmethod=indent
+set foldlevel=1
+set foldnestmax=2
+set foldtext=FoldCCtext()
+
 "------------------------------------------------------
 "color
 "------------------------------------------------------
