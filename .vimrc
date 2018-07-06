@@ -3,6 +3,8 @@
 "------------------------------------------------------
 "シンタックスハイライト"
 syntax on
+"vueファイルのシンタックスハイライト"
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " 全角スペースをハイライト
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
