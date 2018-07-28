@@ -11,7 +11,11 @@ under ~/dotfiles
 sh ./installer.sh ~/.cache/dein
 ```
 Open vim and install dein
+```
 :call dein#install()
+```
+Dein automatically install plugins when vim starts.
+
 ##### fugitive
 under ~/dotfiles/.vim/bundler
 ```
