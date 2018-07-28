@@ -137,7 +137,11 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/unite.vim')
  " Unite.vimで最近使ったファイルを表示できるようにする
  call dein#add('Shougo/neomru.vim')
+
  call dein#add('scrooloose/nerdtree')
+ call dein#add('vim-airline/vim-airline')
+ call dein#add('vim-airline/vim-airline-themes')
+ call dein#add('tpope/vim-fugitive')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
