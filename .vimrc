@@ -152,6 +152,11 @@ if dein#load_state('~/.cache/dein')
  call dein#save_state()
 endif
 
+"未インストールのものがあったら自動的にインストール
+if dein#check_install()
+  call dein#install()
+endif
+
 "------------------------------------------------------
 "NERDTree
 "------------------------------------------------------
