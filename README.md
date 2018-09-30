@@ -1,24 +1,28 @@
 # Ryoko's dotfiles
 ## Installation
-### Using Git
+### Getting Started
+Recommended prerequisites
+- Oh my zsh
+
+Clone dotfiles by using git.
 ```
-git clone https://github.com/ryokotmng/dotfiles.git
+$ git clone https://github.com/ryokotmng/dotfiles.git
 ```
+
 ## Install Plugins
 ##### dein
-under ~/dotfiles
+Under ~/dotfiles
+Create linked dotfiles in home directory.
 ```
-sh ./installer.sh ~/.cache/dein
+$ sh link.sh
 ```
-Open vim and install dein
+Install dein.
+```
+$ sh ./installer.sh ~/.cache/dein
+```
+Then Dein automatically install plugins when vim starts.
+
+If dein doesn't work properly, open vim and install dein
 ```
 :call dein#install()
 ```
-Dein automatically install plugins when vim starts.
-
-##### fugitive
-under ~/dotfiles/.vim/bundler
-```
-git clone https://github.com/tpope/vim-fugitive.git
-```
-## 

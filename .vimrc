@@ -143,6 +143,8 @@ if dein#load_state('~/.cache/dein')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-fugitive')
  call dein#add('tomlion/vim-solidity')
+ call dein#add('Shougo/neosnippet.vim')
+ call dein#add('Shougo/neosnippet-snippets')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
