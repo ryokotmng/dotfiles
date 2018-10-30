@@ -145,6 +145,9 @@ if dein#load_state('~/.cache/dein')
  call dein#add('tomlion/vim-solidity')
  call dein#add('Shougo/neosnippet.vim')
  call dein#add('Shougo/neosnippet-snippets')
+ " マークアップ用
+ call dein#add('mattn/emmet-vim')
+ call dein#add('tell-k/vim-browsereload-mac')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
