@@ -3,6 +3,9 @@
 ### Getting Started
 Recommended prerequisites
 - Oh my zsh
+  - change shell to zsh after installation
+- brew (visit website to find how to install)
+- tig and tree (using brew install)
 
 Clone dotfiles by using git.
 ```
@@ -25,4 +28,10 @@ Then Dein automatically install plugins when vim starts.
 If dein doesn't work properly, open vim and install dein
 ```
 :call dein#install()
+```
+
+Install fugitive
+under ~/dotfiles/.vim/bundler
+```
+git clone https://github.com/tpope/vim-fugitive.git
 ```
