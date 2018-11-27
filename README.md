@@ -6,6 +6,11 @@ Recommended prerequisites
   - change shell to zsh after installation
 - brew (visit website to find how to install)
 - tig and tree (using brew install)
+- Python and pip
+```
+$ brew install python3
+$ sudo easy_install pip
+```
 
 Clone dotfiles by using git.
 ```
@@ -35,3 +40,9 @@ under ~/dotfiles/.vim/bundler
 ```
 git clone https://github.com/tpope/vim-fugitive.git
 ```
+
+Install syntax highlight for Vyper
+```
+$ curl https://raw.githubusercontent.com/jacqueswww/vim-vyper/master/install.sh | sh
+```
+
