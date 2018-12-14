@@ -142,13 +142,15 @@ if dein#load_state('~/.cache/dein')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-fugitive')
- call dein#add('tomlion/vim-solidity')
  call dein#add('Shougo/neosnippet.vim')
  call dein#add('Shougo/neosnippet-snippets')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
  call dein#add('tell-k/vim-browsereload-mac')
+ " Syntax Highlight
  call dein#add('digitaltoad/vim-pug')
+ call dein#add('tomlion/vim-solidity')
+ call dein#add('fatih/vim-go')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
