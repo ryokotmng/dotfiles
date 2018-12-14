@@ -148,6 +148,7 @@ if dein#load_state('~/.cache/dein')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
  call dein#add('tell-k/vim-browsereload-mac')
+ call dein#add('digitaltoad/vim-pug')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
