@@ -151,6 +151,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('digitaltoad/vim-pug')
  call dein#add('tomlion/vim-solidity')
  call dein#add('fatih/vim-go')
+ call dein#add('leafgarland/typescript-vim')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
