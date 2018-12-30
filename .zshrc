@@ -92,15 +92,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="/usr/local/opt/libxslt/bin:$PATH"
-export PATH="/usr/local/opt/libiconv/bin:$PATH"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-alias dev='cd ~/projects/coincheck/app'
 alias rc='rails c'
 alias rs='rails s'
 alias gpull='git pull origin master'
-alias sshlogin='ssh -l ryoko.tominaga -i railsread_id_rsa 54.95.21.31'
-alias devrc='cd /var/www/coincheck/current/ && ./bin/rails c production'
+alias cleos='docker exec -it eosio /opt/eosio/bin/cleos --url http://127
+.0.0.1:7777 --wallet-url http://127.0.0.1:5555'
