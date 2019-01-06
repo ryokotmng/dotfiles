@@ -4,12 +4,23 @@
 Recommended prerequisites
 - Oh my zsh
   - change shell to zsh after installation
-- brew (visit website to find how to install)
+- Homebrew (visit website to find how to install)
 - tig and tree (using brew install)
+- rbenv
+```
+$ brew install rbenv
+```
 - Python and pip
 ```
 $ brew install python3
 $ sudo easy_install pip
+```
+- Git cli tool
+```
+$ brew install git
+$ git config --global user.name "USER_NAME"
+$ git config --global user.email email@example.com
+$ git config --global tag.sort version:refname
 ```
 
 Clone dotfiles by using git.
