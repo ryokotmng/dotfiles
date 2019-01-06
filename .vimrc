@@ -28,6 +28,11 @@ set number
 set autoread
 " ヤンクでクリップボードにコピー
 set clipboard=unnamed,autoselect
+" 自動補完
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
+endfor
 
 "scrollの際、必ず上下にある行数
 set scrolloff=5
