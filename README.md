@@ -57,3 +57,8 @@ Install syntax highlight for Vyper
 $ curl https://raw.githubusercontent.com/jacqueswww/vim-vyper/master/install.sh | sh
 ```
 
+Install instant-markdown-d
+```
+$ gem install redcarpet pygments.rb
+$ npm -g install instant-markdown-d
+```
