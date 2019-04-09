@@ -6,6 +6,7 @@ export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$GOPATH/bin
 
+# Ruby用
 export PATH=$HOME/.rbenv/shims:$PATH
 
 source ~/.zshrc
