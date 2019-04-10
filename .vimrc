@@ -167,6 +167,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('godlygeek/tabular')
  call dein#add('plasticboy/vim-markdown')
  call dein#add('suan/vim-instant-markdown')
+ call dein#add('slim-template/vim-slim')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
