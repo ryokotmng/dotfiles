@@ -60,7 +60,7 @@ set autoindent smartindent
 "タブを押した時にスペースに変換する
 set expandtab
 "tabのスペース設定
-set tabstop=2 shiftwidth=4 softtabstop=0
+set tabstop=2 shiftwidth=2 softtabstop=0
 
 "インデントの数を折畳のレベル(深さ)とする
 set foldmethod=indent

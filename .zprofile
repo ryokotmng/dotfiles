@@ -10,3 +10,5 @@ export GOBIN=$GOPATH/bin
 export PATH=$HOME/.rbenv/shims:$PATH
 
 source ~/.zshrc
+
+export PATH="$HOME/.cargo/bin:$PATH"
