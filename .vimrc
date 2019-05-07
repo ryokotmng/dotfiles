@@ -1,19 +1,19 @@
 "------------------------------------------------------
 "basic
 "------------------------------------------------------
-"シンタックスハイライト"
+" シンタックスハイライト"
 syntax on
-"vueファイルのシンタックスハイライト"
+" vueファイルのシンタックスハイライト"
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " 全角スペースをハイライト
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 
-"swpファイルなし
+" swpファイルなし
 set noswapfile
-"ウインドウのタイトルバーにファイルのパス情報等を表示する 
+" ウインドウのタイトルバーにファイルのパス情報等を表示する 
 set title
-"カーソルが何行目の何列目に置かれているかを表示する
+" カーソルが何行目の何列目に置かれているかを表示する
 set ruler
 " エディタウィンドウの末尾から2行目にステータスラインを常時表示させる 
 set laststatus=2
@@ -22,12 +22,13 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 
 " 保存されていないファイルがあるときでも別のファイルを開くことが出来る
 set hidden
-"行番号を振る
+" 行番号を振る
 set number
-"内容が変更されたら自動的に再読み込み
+" 内容が変更されたら自動的に再読み込み
 set autoread
 " ヤンクでクリップボードにコピー
 set clipboard=unnamed,autoselect
+
 " 自動補完
 set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
@@ -38,19 +39,24 @@ inoremap { {}<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap ( ()<ESC>i
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
+inoremap [ []<Left>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
 
-"scrollの際、必ず上下にある行数
+" scrollの際、必ず上下にある行数
 set scrolloff=5
-"括弧の対応を見せる設定とその時間（秒）
+" 括弧の対応を見せる設定とその時間（秒）
 set showmatch matchtime=1
 "補完メニュー(変換候補の出てくるやつ)の高さ
 set pumheight=10
-"backspace有効
+" backspace有効
 set backspace=indent,eol,start
 " Prevent from opening scratch preview
 set completeopt=menuone
+" ビープ音を鳴らさずエラーメッセージを表示する
+set visualbell t_vb=
+set noerrorbells
 
 "------------------------------------------------------
 "indent
@@ -186,10 +192,10 @@ endif
 "------------------------------------------------------
 "NERDTree
 "------------------------------------------------------
-"ファイルが指定された場合は非表示にし、指定なしの場合は表示する
+" ファイルが指定された場合は非表示にし、指定なしの場合は表示する
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"キーバインド
+" キーバインド
 map <C-n> :NERDTreeToggle<CR>
 " NERDTree File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
