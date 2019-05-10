@@ -58,6 +58,10 @@ set completeopt=menuone
 set visualbell t_vb=
 set noerrorbells
 
+" ウィンドウの分割サイズ変更を1ずつ動くように
+let g:winresizer_vert_resize = 1
+let g:winresizer_horiz_resize = 1
+
 "------------------------------------------------------
 "indent
 "------------------------------------------------------
@@ -174,6 +178,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('plasticboy/vim-markdown')
  call dein#add('suan/vim-instant-markdown')
  call dein#add('slim-template/vim-slim')
+ call dein#add('simeji/winresizer')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')

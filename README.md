@@ -35,7 +35,7 @@ Create linked dotfiles in home directory.
 ```
 $ sh link.sh
 ```
-Install dein.
+dein
 ```
 $ sh ./installer.sh ~/.cache/dein
 ```
@@ -46,19 +46,23 @@ If dein doesn't work properly, open vim and install dein
 :call dein#install()
 ```
 
-Install fugitive
+fugitive
 under ~/dotfiles/.vim/bundler
 ```
 git clone https://github.com/tpope/vim-fugitive.git
 ```
 
-Install syntax highlight for Vyper
+syntax highlight for Vyper
 ```
 $ curl https://raw.githubusercontent.com/jacqueswww/vim-vyper/master/install.sh | sh
 ```
 
-Install instant-markdown-d
+instant-markdown-d
 ```
 $ gem install redcarpet pygments.rb
 $ npm -g install instant-markdown-d
+```
+hub
+```
+$ brew install hub
 ```
