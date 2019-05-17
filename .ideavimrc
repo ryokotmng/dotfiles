@@ -1,0 +1,17 @@
+" IdeaVimと共通の設定の読み込み
+source .vimrc.keymap
+" 大文字小文字無視
+set ignorecase
+" 検索時に大文字を含んでいたら大小を区別
+set smartcase
+" 行末のスペースを可視化
+set listchars=tab:^\ ,trail:~
+" ヤンクでクリップボードにコピー
+set clipboard=unnamed,autoselect
+"------------------------------------------------------
+".vimrcと共通
+"------------------------------------------------------
+"キーの割当て"
+inoremap <silent> jj <ESC>
+nnoremap L $
+nnoremap H ^

@@ -62,6 +62,10 @@ set noerrorbells
 let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
+"キーの割当て"
+inoremap <silent> jj <ESC>
+nnoremap L $
+nnoremap H ^
 "------------------------------------------------------
 "indent
 "------------------------------------------------------
@@ -94,12 +98,6 @@ set hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
-
-"------------------------------------------------------
-"キーバインド
-"------------------------------------------------------
-"Escキーをjjに割当て"
-inoremap <silent> jj <ESC>
 
 "------------------------------------------------------
 "other
@@ -222,4 +220,3 @@ call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 
 filetype plugin indent on
 syntax enable
-
