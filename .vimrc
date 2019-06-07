@@ -177,6 +177,8 @@ if dein#load_state('~/.cache/dein')
  call dein#add('suan/vim-instant-markdown')
  call dein#add('slim-template/vim-slim')
  call dein#add('simeji/winresizer')
+ " rubocop
+ call dein#add('w0rp/ale')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
