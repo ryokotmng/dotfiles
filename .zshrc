@@ -96,6 +96,8 @@ alias rs='rails s'
 alias gpull='git pull origin master'
 alias cleos='docker exec -it eosio /opt/eosio/bin/cleos --url http://127
 .0.0.1:7777 --wallet-url http://127.0.0.1:5555'
+alias ctags="`brew --prefix`/bin/ctags"
+alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
 
 # opam configuration
 test -r /Users/ryokotominaga/.opam/opam-init/init.zsh && . /Users/ryokotominaga/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

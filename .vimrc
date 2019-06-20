@@ -157,6 +157,12 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/unite.vim')
  " Unite.vimで最近使ったファイルを表示できるようにする
  call dein#add('Shougo/neomru.vim')
+ " vim内で定義元にジャンプする
+ call dein#add('szw/vim-tags')
+ call dein#add('soramugi/auto-ctags.vim')
+ let g:auto_ctags = 1
+ let g:auto_ctags_directory_list = ['.git']
+ set tags+=.git/tags
 
  call dein#add('scrooloose/nerdtree')
  call dein#add('vim-airline/vim-airline')
