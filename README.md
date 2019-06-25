@@ -15,7 +15,7 @@ $ brew install rbenv
 $ brew install python3
 $ sudo easy_install pip
 ```
-- Git cli tool
+- Git CLI tool
 ```
 $ brew install git
 $ git config --global user.name "USER_NAME"
@@ -29,6 +29,22 @@ $ git clone https://github.com/ryokotmng/dotfiles.git
 ```
 
 ## Install Plugins
+
+fugitive
+under ~/dotfiles/.vim/bundler
+```
+git clone https://github.com/tpope/vim-fugitive.git
+```
+
+others
+```
+$ brew install hub
+$ brew install ctags
+$ gem install redcarpet pygments.rb
+$ npm -g install instant-markdown-d
+```
+'$ st' で.git以下にtagsファイルが作成されるよう、.zshrcでalias設定している。
+
 ##### dein
 Under ~/dotfiles
 Create linked dotfiles in home directory.
@@ -44,25 +60,4 @@ Then Dein automatically install plugins when vim starts.
 If dein doesn't work properly, open vim and install dein
 ```
 :call dein#install()
-```
-
-fugitive
-under ~/dotfiles/.vim/bundler
-```
-git clone https://github.com/tpope/vim-fugitive.git
-```
-
-syntax highlight for Vyper
-```
-$ curl https://raw.githubusercontent.com/jacqueswww/vim-vyper/master/install.sh | sh
-```
-
-instant-markdown-d
-```
-$ gem install redcarpet pygments.rb
-$ npm -g install instant-markdown-d
-```
-hub
-```
-$ brew install hub
 ```
