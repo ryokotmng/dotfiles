@@ -91,11 +91,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias rc='rails c'
-alias rs='rails s'
-alias gpull='git pull origin master'
-alias cleos='docker exec -it eosio /opt/eosio/bin/cleos --url http://127
-.0.0.1:7777 --wallet-url http://127.0.0.1:5555'
+alias rc='bundle exec rails c'
+alias rs='bundle exec rails s'
 alias ctags="`brew --prefix`/bin/ctags"
 alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
 

@@ -173,6 +173,9 @@ if dein#load_state('~/.cache/dein')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
  call dein#add('tell-k/vim-browsereload-mac')
+ " 表を簡単に作る
+ call dein#add('dhruvasagar/vim-table-mode')
+ let g:table_mode_corner = '|'
  " Syntax Highlight
  call dein#add('digitaltoad/vim-pug')
  call dein#add('tomlion/vim-solidity')
