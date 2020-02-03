@@ -39,7 +39,7 @@ git clone https://github.com/tpope/vim-fugitive.git
 others
 ```
 $ brew install hub
-$ brew install ctags
+$ brew install --HEAD universal-ctags
 $ gem install redcarpet pygments.rb
 $ npm -g install instant-markdown-d
 ```

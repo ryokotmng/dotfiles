@@ -66,6 +66,7 @@ let g:winresizer_horiz_resize = 1
 inoremap <silent> jj <ESC>
 nnoremap L $
 nnoremap H ^
+
 "------------------------------------------------------
 "indent
 "------------------------------------------------------
@@ -174,6 +175,8 @@ if dein#load_state('~/.cache/dein')
  " 表を簡単に作る
  call dein#add('dhruvasagar/vim-table-mode')
  let g:table_mode_corner = '|'
+ " 空白をハイライト
+ call dein#add('bronson/vim-trailing-whitespace')
  " Syntax Highlight
  call dein#add('digitaltoad/vim-pug')
  call dein#add('tomlion/vim-solidity')
@@ -184,6 +187,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('suan/vim-instant-markdown')
  call dein#add('slim-template/vim-slim')
  call dein#add('simeji/winresizer')
+ call dein#add('hashivim/vim-terraform')
  " rubocop
  call dein#add('w0rp/ale')
 
