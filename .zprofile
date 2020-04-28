@@ -5,6 +5,7 @@ export PATH=/usr/local:$PATH
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$GOPATH/bin
+export GO111MODULE=on
 
 # Ruby用
 export PATH=$HOME/.rbenv/shims:$PATH
