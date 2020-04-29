@@ -98,7 +98,7 @@ alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no 
 test -r /Users/ryokotominaga/.opam/opam-init/init.zsh && . /Users/ryokotominaga/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
-bindkey '^]' peco-src
+bindkey '^g' peco-src
 function peco-src() {
   local src=$(ghq list --full-path | peco --query "$LBUFFER")
   if [ -n "$src" ]; then
