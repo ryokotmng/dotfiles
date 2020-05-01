@@ -61,6 +61,10 @@ set noerrorbells
 " ウィンドウの分割サイズ変更を1ずつ動くように
 let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
+" 画面分割して定義へ移動
+let mapleader = "\<Space>"
+au FileType go nmap <leader>s <Plug>(go-def-split)
+au FileType go nmap <leader>v <Plug>(go-def-vertical)
 
 "キーの割当て"
 inoremap <silent> jj <ESC>
