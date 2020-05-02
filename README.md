@@ -40,10 +40,14 @@ others
 ```
 $ brew install hub
 $ brew install --HEAD universal-ctags
+$ brew install the_silver_searcher
 $ gem install redcarpet pygments.rb
 $ npm -g install instant-markdown-d
 ```
-'$ st' で.git以下にtagsファイルが作成されるよう、.zshrcでalias設定している。
+ctags alias
+```
+$ st
+```
 
 ##### dein
 Under ~/dotfiles
