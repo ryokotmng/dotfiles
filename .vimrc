@@ -108,6 +108,13 @@ set incsearch
 " オートコンプリート
 let g:sonictemplate_vim_template_dir = expand('~/.vim/sonictemplate')
 " neoterm
+let g:neoterm_default_mod='vertical belowright'
+let g:neoterm_size=70
+let g:neoterm_autoscroll=1
+nnoremap <c-c> :Tnew<CR>
+tnoremap <c-c> <C-¥><C-n>:Tnew<CR>
+nnoremap (keymapping) :T (command)<CR>
+nnoremap (keymapping) :T (command)<CR><C-w>h
 
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
@@ -197,6 +204,8 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
  " rubocop
  call dein#add('w0rp/ale')
+ " その他
+ call dein#add('kassio/neoterm')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
