@@ -1,6 +1,10 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local:$PATH
 
+# neovim用
+export XDG_CONFIG_HOME=~/.config
+export XDG_CACHE_HOME=~/.cache
+
 # Go用
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin

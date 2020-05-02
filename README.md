@@ -38,7 +38,7 @@ $ npm -g install instant-markdown-d
 ```
 Create fle link to use neovim
 ```
-$ n -sf ~/dotfiles/.vimrc ~/.config/nvim/init.vim
+$ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
 ```
 ctags alias
 ```

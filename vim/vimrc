@@ -2,7 +2,6 @@
 "basic
 "------------------------------------------------------
 " シンタックスハイライト"
-syntax on
 " vueファイルのシンタックスハイライト"
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " 全角スペースをハイライト
@@ -26,8 +25,6 @@ set hidden
 set number
 " 内容が変更されたら自動的に再読み込み
 set autoread
-" ヤンクでクリップボードにコピー
-set clipboard=unnamed,autoselect
 
 " 自動補完
 set completeopt=menuone
@@ -105,7 +102,7 @@ set incsearch
 " other
 "------------------------------------------------------
 " オートコンプリート用テンプレート
-let g:sonictemplate_vim_template_dir = expand('~/.vim/sonictemplate')
+let g:sonictemplate_vim_template_dir = expand('~/dotfiles/vim/sonictemplate')
 " neoterm
 let g:neoterm_default_mod='vertical belowright'
 let g:neoterm_size=70
@@ -168,14 +165,11 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/unite.vim')
  " vim内で定義元にジャンプする
  call dein#add('szw/vim-tags')
+ call dein#add('fatih/vim-go')
  call dein#add('soramugi/auto-ctags.vim')
  let g:auto_ctags = 1
  let g:auto_ctags_directory_list = ['.git']
  set tags+=.git/tags
-
- call plug#begin()
-  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-  call plug#end()
 
  call dein#add('scrooloose/nerdtree')
  call dein#add('vim-airline/vim-airline')
@@ -203,6 +197,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('hashivim/vim-terraform')
  " オートコンプリート
  call dein#add('Shougo/deoplete.nvim')
+ call dein#add('junegunn/fzf.vim')
  " rubocop
  call dein#add('w0rp/ale')
  " その他

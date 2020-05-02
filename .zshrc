@@ -93,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ctags="`brew --prefix`/bin/ctags"
 alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
+alias vi='nvim'
 
 # opam configuration
 test -r /Users/ryokotominaga/.opam/opam-init/init.zsh && . /Users/ryokotominaga/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
