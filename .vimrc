@@ -11,11 +11,11 @@ match ZenkakuSpace /　/
 
 " swpファイルなし
 set noswapfile
-" ウインドウのタイトルバーにファイルのパス情報等を表示する 
+" ウインドウのタイトルバーにファイルのパス情報等を表示する
 set title
 " カーソルが何行目の何列目に置かれているかを表示する
 set ruler
-" エディタウィンドウの末尾から2行目にステータスラインを常時表示させる 
+" エディタウィンドウの末尾から2行目にステータスラインを常時表示させる
 set laststatus=2
 " ステータス行に表示させる情報
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
@@ -158,14 +158,16 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
  " ファイルを開けるのを便利に
  call dein#add('Shougo/unite.vim')
- " Unite.vimで最近使ったファイルを表示できるようにする
- call dein#add('Shougo/neomru.vim')
  " vim内で定義元にジャンプする
  call dein#add('szw/vim-tags')
  call dein#add('soramugi/auto-ctags.vim')
  let g:auto_ctags = 1
  let g:auto_ctags_directory_list = ['.git']
  set tags+=.git/tags
+
+ call plug#begin()
+  Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+  call plug#end()
 
  call dein#add('scrooloose/nerdtree')
  call dein#add('vim-airline/vim-airline')
@@ -184,7 +186,6 @@ if dein#load_state('~/.cache/dein')
  " Syntax Highlight
  call dein#add('digitaltoad/vim-pug')
  call dein#add('tomlion/vim-solidity')
- call dein#add('fatih/vim-go')
  call dein#add('leafgarland/typescript-vim')
  call dein#add('godlygeek/tabular')
  call dein#add('plasticboy/vim-markdown')
