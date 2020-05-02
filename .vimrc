@@ -93,11 +93,10 @@ hi ColorColumn ctermbg=235 guibg=#2c2d27
 "------------------------------------------------------
 "search
 "------------------------------------------------------
-" 大文字小文字無視
 set ignorecase
-" 検索結果をハイライトする
+set smartcase
+set wrapscan
 set hlsearch
-" Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
@@ -105,7 +104,7 @@ set incsearch
 "------------------------------------------------------
 " other
 "------------------------------------------------------
-" オートコンプリート
+" オートコンプリート用テンプレート
 let g:sonictemplate_vim_template_dir = expand('~/.vim/sonictemplate')
 " neoterm
 let g:neoterm_default_mod='vertical belowright'
@@ -163,6 +162,8 @@ if dein#load_state('~/.cache/dein')
 
  call dein#add('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
+ call dein#add('deoplete-plugins/deoplete-jedi')
+ call dein#add('Shougo/neco-vim')
  " ファイルを開けるのを便利に
  call dein#add('Shougo/unite.vim')
  " vim内で定義元にジャンプする
