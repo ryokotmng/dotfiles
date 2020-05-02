@@ -6,15 +6,6 @@ Recommended prerequisites
   - change shell to zsh after installation
 - Homebrew (visit website to find how to install)
 - tig and tree (using brew install)
-- rbenv
-```
-$ brew install rbenv
-```
-- Python and pip
-```
-$ brew install python3
-$ sudo easy_install pip
-```
 - Git CLI tool
 ```
 $ brew install git
@@ -39,10 +30,15 @@ git clone https://github.com/tpope/vim-fugitive.git
 others
 ```
 $ brew install hub
+$ brew install neovim
 $ brew install --HEAD universal-ctags
 $ brew install the_silver_searcher
 $ gem install redcarpet pygments.rb
 $ npm -g install instant-markdown-d
+```
+Create fle link to use neovim
+```
+$ n -sf ~/dotfiles/.vimrc ~/.config/nvim/init.vim
 ```
 ctags alias
 ```
