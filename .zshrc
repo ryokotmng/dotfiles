@@ -95,6 +95,10 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
 alias vi='nvim'
 
+# プロンプトのカスタマイズ
+autoload -U promptinit; promptinit
+prompt pure
+
 # opam configuration
 test -r /Users/ryokotominaga/.opam/opam-init/init.zsh && . /Users/ryokotominaga/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
