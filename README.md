@@ -6,12 +6,13 @@ Recommended prerequisites
   - change shell to zsh after installation
 - Homebrew (visit website to find how to install)
 - tig and tree (using brew install)
-- Git CLI tool
+- Git tools
 ```
 $ brew install git
 $ git config --global user.name "USER_NAME"
 $ git config --global user.email email@example.com
 $ git config --global tag.sort version:refname
+$ brew install lazygit
 ```
 
 Clone dotfiles by using git.
