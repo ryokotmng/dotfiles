@@ -198,6 +198,8 @@ if dein#load_state('~/.cache/dein')
  call dein#add('slim-template/vim-slim')
  call dein#add('simeji/winresizer')
  call dein#add('hashivim/vim-terraform')
+ " オートコンプリート
+ call dein#add('Shougo/deoplete.nvim')
  " rubocop
  call dein#add('w0rp/ale')
 
