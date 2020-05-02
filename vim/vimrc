@@ -104,8 +104,8 @@ set incsearch
 " オートコンプリート用テンプレート
 let g:sonictemplate_vim_template_dir = expand('~/dotfiles/vim/sonictemplate')
 " neoterm
-let g:neoterm_default_mod='vertical belowright'
-let g:neoterm_size=70
+let g:neoterm_default_mod='belowright'
+let g:neoterm_size=20
 let g:neoterm_autoscroll=1
 nnoremap <c-c> :Tnew<CR>
 tnoremap <c-c> <C-¥><C-n>:Tnew<CR>
