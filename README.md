@@ -5,7 +5,6 @@ Recommended prerequisites
 - Oh my zsh
   - change shell to zsh after installation
 - Homebrew (visit website to find how to install)
-- tig and tree (using brew install)
 - Git tools
 ```
 $ brew install git
@@ -32,6 +31,7 @@ others
 ```
 $ brew install hub
 $ brew install neovim
+$ brew install tree
 $ brew install --HEAD universal-ctags
 $ brew install the_silver_searcher
 $ gem install redcarpet pygments.rb

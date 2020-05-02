@@ -103,6 +103,8 @@ set incsearch
 "------------------------------------------------------
 " オートコンプリート用テンプレート
 let g:sonictemplate_vim_template_dir = expand('~/dotfiles/vim/sonictemplate')
+imap <silent> <C-l> <plug>(sonictemplate-postfix)
+
 " neoterm
 let g:neoterm_default_mod='belowright'
 let g:neoterm_size=20
@@ -198,6 +200,7 @@ if dein#load_state('~/.cache/dein')
  " オートコンプリート
  call dein#add('Shougo/deoplete.nvim')
  call dein#add('junegunn/fzf.vim')
+ call dein#add('mattn/sonictemplate-vim')
  " rubocop
  call dein#add('w0rp/ale')
  " その他
