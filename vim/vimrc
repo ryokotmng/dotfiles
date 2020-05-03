@@ -151,6 +151,10 @@ nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 
+" 置換
+nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
+
+
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
 """"""""""""""""""""""""""""""
