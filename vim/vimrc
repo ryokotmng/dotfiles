@@ -25,6 +25,12 @@ set hidden
 set number
 " 内容が変更されたら自動的に再読み込み
 set autoread
+" クリップボードを共有
+if has("mac")
+  set clipboard+=unnamed
+else
+  set clipboard^=unnamedplus
+endif
 
 " 自動補完
 set completeopt=menuone
