@@ -31,15 +31,6 @@ set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
 endfor
-" カッコ補完
-inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap ( ()<ESC>i
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
-inoremap [ []<Left>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap ' ''<LEFT>
-inoremap " ""<LEFT>
 
 " scrollの際、必ず上下にある行数
 set scrolloff=5
@@ -202,6 +193,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('junegunn/fzf.vim')
  call dein#add('mattn/sonictemplate-vim')
  call dein#add('tpope/vim-endwise')
+ call dein#add('Townk/vim-autoclose')
  " rubocop
  call dein#add('w0rp/ale')
  " その他
