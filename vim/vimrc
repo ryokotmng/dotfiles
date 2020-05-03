@@ -1,13 +1,6 @@
 "------------------------------------------------------
 " basic
 "------------------------------------------------------
-" シンタックスハイライト"
-" vueファイルのシンタックスハイライト"
-autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
-" 全角スペースをハイライト
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
-match ZenkakuSpace /　/
-
 " swpファイルなし
 set noswapfile
 " ウインドウのタイトルバーにファイルのパス情報等を表示する
@@ -69,6 +62,20 @@ nnoremap H ^
 "------------------------------------------------------
 " style
 "------------------------------------------------------
+" シンタックスハイライト"
+" vueファイルのシンタックスハイライト"
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
+" 全角スペースをハイライト
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+match ZenkakuSpace /　/
+
+" カーソルラインを表示
+set cursorline
+" 行番号のみハイライト
+if !has('nvim')
+    set cursorlineopt=number
+endif
+
 "新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする
 set autoindent smartindent
 "タブを押した時にスペースに変換する
