@@ -114,7 +114,7 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>lazy :T lazygit<CR><C-w>j
+nnoremap <leader>git :T lazygit<CR><C-w>j
 
 " タブ移動
 nnoremap s <Nop>
