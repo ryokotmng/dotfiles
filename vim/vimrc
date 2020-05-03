@@ -106,15 +106,24 @@ imap <silent> <C-l> <plug>(sonictemplate-postfix)
 " neoterm
 let g:neoterm_default_mod='belowright'
 let g:neoterm_size=20
-nnoremap <c-c> :Tnew<CR><C-w>j
-tnoremap <c-c> <C-¥><C-n>:Tnew<CR>
-nnoremap (keymapping) :T (command)<CR>
-nnoremap (keymapping) :T (command)<CR><C-w>h
+
+" キーバインド
+" Git
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>git :T lazygit<CR><C-w>j
+
+" ファイルの保存と修了
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q!<CR>
+
+" タブ
+nnoremap <c-c> :Tnew<CR><C-w>j
+tnoremap <c-c> <C-¥><C-n>:Tnew<CR>
+nnoremap (keymapping) :T (command)<CR>
+nnoremap (keymapping) :T (command)<CR><C-w>h
 
 " タブ移動
 nnoremap s <Nop>
