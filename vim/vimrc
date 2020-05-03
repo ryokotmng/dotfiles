@@ -111,6 +111,10 @@ nnoremap <c-c> :Tnew<CR>
 tnoremap <c-c> <C-¥><C-n>:Tnew<CR>
 nnoremap (keymapping) :T (command)<CR>
 nnoremap (keymapping) :T (command)<CR><C-w>h
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gb :Gblame<CR>
 
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
