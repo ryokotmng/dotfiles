@@ -154,6 +154,8 @@ nnoremap sQ :<C-u>bd<CR>
 " 置換
 nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
 
+" grepした結果をquickfixに表示する
+au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
