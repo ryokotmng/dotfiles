@@ -201,6 +201,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
  call dein#add('junegunn/fzf.vim')
  call dein#add('mattn/sonictemplate-vim')
+ call dein#add('tpope/vim-endwise')
  " rubocop
  call dein#add('w0rp/ale')
  " その他
