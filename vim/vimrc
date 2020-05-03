@@ -1,5 +1,5 @@
 "------------------------------------------------------
-"basic
+" basic
 "------------------------------------------------------
 " シンタックスハイライト"
 " vueファイルのシンタックスハイライト"
@@ -163,13 +163,6 @@ if dein#load_state('~/.cache/dein')
  let g:auto_ctags = 1
  let g:auto_ctags_directory_list = ['.git']
  set tags+=.git/tags
-
- call dein#add('scrooloose/nerdtree')
- call dein#add('vim-airline/vim-airline')
- call dein#add('vim-airline/vim-airline-themes')
- call dein#add('tpope/vim-fugitive')
- call dein#add('Shougo/neosnippet.vim')
- call dein#add('Shougo/neosnippet-snippets')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
  call dein#add('tell-k/vim-browsereload-mac')
@@ -197,6 +190,12 @@ if dein#load_state('~/.cache/dein')
  " rubocop
  call dein#add('w0rp/ale')
  " その他
+ call dein#add('scrooloose/nerdtree')
+ call dein#add('vim-airline/vim-airline')
+ call dein#add('vim-airline/vim-airline-themes')
+ call dein#add('tpope/vim-fugitive')
+ call dein#add('Shougo/neosnippet.vim')
+ call dein#add('Shougo/neosnippet-snippets')
  call dein#add('kassio/neoterm')
 
  if !has('nvim')
