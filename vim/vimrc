@@ -85,6 +85,23 @@ set t_Co=256
 let &colorcolumn=join(range(81,999),",")
 hi ColorColumn ctermbg=235 guibg=#2c2d27
 
+" ファイル保存時に整形
+let s:format_targets = {
+      \ 'javascript': '--use-tabs=false --single-quote=true %',
+      \ 'html': '--use-tabs=false --single-quote=true %',
+      \ 'json': '--tab',
+      \ 'vue':  '--use-tabs=false --single-quote=true %',
+      \ }
+
+" 行末の空白削除
+let s:spaces_target_ft = {
+      \ 'markdown': 0,
+      \ 'go': 1,
+      \ 'javascript': 1,
+      \ 'graphql': 1,
+      \ 'terminal': 1,
+      \ }
+
 "------------------------------------------------------
 "search
 "------------------------------------------------------
