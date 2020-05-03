@@ -137,7 +137,7 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>git :T lazygit<CR><C-w>j
+nnoremap <leader>git :T lazygit<CR><C-w>ja
 
 " ファイルの保存と修了
 nnoremap <Leader>w :w<CR>
