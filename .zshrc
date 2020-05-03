@@ -94,6 +94,12 @@ source $ZSH/oh-my-zsh.sh
 alias ctags="`brew --prefix`/bin/ctags"
 alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
 alias vi='nvim'
+alias gh='cd $(ghq list -p | peco)'
+alias gho='gh-open $(ghq list -p | peco)'
+function find_cd() {
+    cd "$(find . -type d | peco)"
+}
+alias fc="find_cd"
 
 # プロンプトのカスタマイズ
 autoload -U promptinit; promptinit
