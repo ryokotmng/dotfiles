@@ -55,6 +55,7 @@ au FileType go nmap <leader>s <Plug>(go-def-split)
 au FileType go nmap <leader>v <Plug>(go-def-vertical)
 
 "キーの割当て"
+let g:mapleader = "\<Space>"
 inoremap <silent> jj <ESC>
 nnoremap L $
 nnoremap H ^
