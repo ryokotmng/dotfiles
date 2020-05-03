@@ -144,7 +144,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 
 " タブ
-nnoremap <c-c> :Tnew<CR><C-w>j
+nnoremap <c-c> :Tnew<CR><C-w>ja
 tnoremap <c-c> <C-¥><C-n>:Tnew<CR>
 nnoremap (keymapping) :T (command)<CR>
 nnoremap (keymapping) :T (command)<CR><C-w>h
