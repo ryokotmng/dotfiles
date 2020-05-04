@@ -185,6 +185,12 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 nnoremap <Leader>. :new ~/.vimrc<CR>
 nnoremap <Leader>s :source ~/.vimrc<CR>
 
+" fzf
+" ファイル一覧を出すときにプレビュー表示
+command! -bang -nargs=? -complete=dir Files
+            \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+nnoremap <C-y> :Files<CR>
+
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
 """"""""""""""""""""""""""""""
@@ -263,6 +269,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('hashivim/vim-terraform')
  " オートコンプリート
  call dein#add('Shougo/deoplete.nvim')
+ call dein#add('junegunn/fzf', {'build': './install --all'})
  call dein#add('junegunn/fzf.vim')
  call dein#add('mattn/sonictemplate-vim')
  call dein#add('tpope/vim-endwise')
