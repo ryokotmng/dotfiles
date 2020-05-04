@@ -42,10 +42,7 @@ Create fle link to use neovim
 ```
 $ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
 ```
-ctags alias
-```
-$ st
-```
+neovim may require to install itself in some languages, please check ':CheckHealth'.
 
 ##### dein
 Under ~/dotfiles
