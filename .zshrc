@@ -109,7 +109,27 @@ prompt pure
 test -r /Users/ryokotominaga/.opam/opam-init/init.zsh && . /Users/ryokotominaga/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
-bindkey '^g' peco-src
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# peco
+zle -N peco-src
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+function peco-lscd {
+    local dir="$( find . -maxdepth 1 -type d | sed -e 's;\./;;' | peco )"
+    if [ ! -z "$dir" ] ; then
+        cd "$dir"
+    fi
+}
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
 function peco-src() {
   local src=$(ghq list --full-path | peco --query "$LBUFFER")
   if [ -n "$src" ]; then
@@ -118,8 +138,4 @@ function peco-src() {
   fi
   zle -R -c
 }
-
-zle -N peco-src
-[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey '^g' peco-src
