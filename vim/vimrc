@@ -237,8 +237,6 @@ if dein#load_state('~/.cache/dein')
  call dein#begin('~/.cache/dein')
 
  call dein#add('~/.cache/dein')
- call dein#add('Shougo/deoplete.nvim')
- call dein#add('deoplete-plugins/deoplete-jedi')
  call dein#add('Shougo/neco-vim')
  " ファイルを開けるのを便利に
  call dein#add('Shougo/unite.vim')
