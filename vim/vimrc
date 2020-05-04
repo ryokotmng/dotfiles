@@ -244,7 +244,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/unite.vim')
  " vim内で定義元にジャンプする
  call dein#add('szw/vim-tags')
- call dein#add('fatih/vim-go')
+ call dein#add('fatih/vim-go', {'do': ':GoInstallBinaries'})
  call dein#add('soramugi/auto-ctags.vim')
  let g:auto_ctags = 1
  let g:auto_ctags_directory_list = ['.git']
