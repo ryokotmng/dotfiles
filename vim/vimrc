@@ -266,7 +266,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('simeji/winresizer')
  call dein#add('hashivim/vim-terraform')
  " オートコンプリート
- call dein#add('Shougo/deoplete.nvim')
+ call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly', 'branch': 'release'})
  call dein#add('junegunn/fzf', {'build': './install --all'})
  call dein#add('junegunn/fzf.vim')
  call dein#add('mattn/sonictemplate-vim')
