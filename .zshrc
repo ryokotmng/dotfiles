@@ -1,4 +1,4 @@
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -111,31 +111,51 @@ test -r /Users/ryokotominaga/.opam/opam-init/init.zsh && . /Users/ryokotominaga/
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# peco
-zle -N peco-src
-[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
-function peco-lscd {
-    local dir="$( find . -maxdepth 1 -type d | sed -e 's;\./;;' | peco )"
-    if [ ! -z "$dir" ] ; then
-        cd "$dir"
-    fi
+# peco settings
+# 過去に実行したコマンドを選択。ctrl-rにバインド
+function peco-select-history() {
+  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
 }
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+# search a destination from cdr list
+function peco-get-destination-from-cdr() {
+  cdr -l | \
+  sed -e 's/^[[:digit:]]*[[:blank:]]*//' | \
+  peco --query "$LBUFFER"
+}
+
+
+### 過去に移動したことのあるディレクトリを選択。ctrl-xにバインド
+function peco-get-destination-from-cdr() {
+  cdr -l | \
+  sed -e 's/^[[:digit:]]*[[:blank:]]*//' | \
+  awk '{c=gsub("/","/"); print c,length($0),$0}' | \
+  sort -n | \
+  cut -d' ' -f1- | \
+  peco --query "$LBUFFER"
+}
+
+### search a destination from cdr list and cd the destination
+function peco-cdr() {
+  local destination="$(peco-get-destination-from-cdr)"
+  if [ -n "$destination" ]; then
+    BUFFER="cd $destination"
+    zle accept-line
+  else
     zle reset-prompt
-}
-
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
-
-function peco-src() {
-  local src=$(ghq list --full-path | peco --query "$LBUFFER")
-  if [ -n "$src" ]; then
-    BUFFER="cd $src"
-    zle accelt-line
   fi
-  zle -R -c
 }
-bindkey '^g' peco-src
+zle -N peco-cdr
+bindkey '^x' peco-cdr
+
+
+# ブランチを簡単切り替え。git checkout lbで実行できる
+alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+
+
+# dockerコンテナに入る。deで実行できる
+alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
