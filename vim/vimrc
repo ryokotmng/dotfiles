@@ -212,7 +212,7 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 " vimrcを操作
 nnoremap <Leader>. :new ~/.vimrc<CR>
-nnoremap <Leader>s :source ~/.vimrc<CR>
+nnoremap <Leader>ss :source ~/.vimrc<CR>
 
 " fzf
 " ファイル一覧を出すときにプレビュー表示
