@@ -62,8 +62,7 @@ nnoremap H ^
 "------------------------------------------------------
 " style
 "------------------------------------------------------
-" シンタックスハイライト"
-" vueファイルのシンタックスハイライト"
+" vueファイルのシンタックスハイライト
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 " 全角スペースをハイライト
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
@@ -353,3 +352,4 @@ call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 
 filetype plugin indent on
 syntax enable
+colorscheme iceberg
