@@ -98,6 +98,7 @@ let s:format_targets = {
       \ 'json': '--tab',
       \ 'vue':  '--use-tabs=false --single-quote=true %',
       \ }
+let g:ale_fix_on_save = 1
 
 " 行末の空白削除
 let s:spaces_target_ft = {
