@@ -307,7 +307,6 @@ if dein#load_state('~/.cache/dein')
  call dein#add('w0rp/ale')
  " その他
  call dein#add('scrooloose/nerdtree')
- call dein#add('tpope/vim-fugitive')
  call dein#add('Shougo/neosnippet.vim')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('kassio/neoterm')
