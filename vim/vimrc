@@ -220,7 +220,7 @@ nnoremap <Leader>ss :source ~/.vimrc<CR>
 " ファイル一覧を出すときにプレビュー表示
 command! -bang -nargs=? -complete=dir Files
             \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-nnoremap <C-y> :Files<CR>
+nnoremap <C-P> :Files<CR>
 
 " ステータスラインにコマンドの候補を表示
 set wildmenu
