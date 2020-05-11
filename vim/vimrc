@@ -280,6 +280,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('kassio/neoterm')
  call dein#add('airblade/vim-gitgutter')
+ call dein#add('Lokaltog/vim-powerline')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
