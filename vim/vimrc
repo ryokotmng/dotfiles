@@ -209,6 +209,11 @@ nnoremap <leader>ss :<C-u>sp<CR>
 nnoremap <leader>sv :<C-u>vs<CR>
 nnoremap <leader>sq :<C-u>q<CR>
 nnoremap <leader>sQ :<C-u>bd<CR>
+" vimgrep
+nnoremap [q :cprevious<CR>   " 前へ
+nnoremap ]q :cnext<CR>       " 次へ
+nnoremap [Q :<C-u>cfirst<CR> " 最初へ
+nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 
 " 置換
 nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
