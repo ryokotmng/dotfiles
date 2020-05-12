@@ -338,7 +338,7 @@ colorscheme iceberg
 " 色の設定
 set t_Co=256
 " 選択行をハイライト
-hi cursorline term=reverse cterm=none ctermbg=242
+hi cursorline term=reverse cterm=none ctermbg=232
 " goで'if erro != nil'をコメントと同じ色にする
 syn match goExtIfErr "\v^\s*if\s+err\s*\!\=\s*nil\s*\{\s*\_$\_.\s*return.+\_$\_.\s*\}" fold
 hi def link goExtIfErr Comment
