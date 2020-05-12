@@ -61,30 +61,25 @@ nnoremap H ^
 "------------------------------------------------------
 " style
 "------------------------------------------------------
-" vueファイルのシンタックスハイライト
-autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
-" 全角スペースをハイライト
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
-match ZenkakuSpace /　/
-
 " カーソルラインを表示
 set cursorline
-" 行番号のみハイライト
-if !has('nvim')
-    set cursorlineopt=number
-endif
-
 "新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする
 set autoindent smartindent
 "タブを押した時にスペースに変換する
 set expandtab
+" 全角スペースをハイライト
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+match ZenkakuSpace /　/
 "tabのスペース設定
 set tabstop=2 shiftwidth=2 softtabstop=0
+" 行番号をハイライト
+if !has('nvim')
+    set cursorlineopt=number
+endif
 
 "インデントの数を折畳のレベル(深さ)とする
 set foldmethod=indent
 set foldtext=FoldCCtext()
-set t_Co=256
 
 "80カラムルール
 let &colorcolumn=join(range(81,999),",")
@@ -107,6 +102,9 @@ let s:spaces_target_ft = {
       \ 'graphql': 1,
       \ 'terminal': 1,
       \ }
+
+" vueファイルのシンタックスハイライト
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 
 " go用
 let g:go_highlight_array_whitespace_error = 1
@@ -332,4 +330,12 @@ call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
 
 filetype plugin indent on
 syntax enable
+
+"------------------------------------------------------
+" 色の設定
+"------------------------------------------------------
 colorscheme iceberg
+" 色の設定
+set t_Co=256
+" 選択行をハイライト
+hi cursorline term=reverse cterm=none ctermbg=242
