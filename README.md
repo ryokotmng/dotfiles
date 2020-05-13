@@ -44,6 +44,9 @@ $ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
 ```
 neovim may require to install itself in some languages, please check ':CheckHealth'.
 
+Need git clone to ~/.vim
+- rupa/z
+
 ##### dein
 Under ~/dotfiles
 Create linked dotfiles in home directory.
