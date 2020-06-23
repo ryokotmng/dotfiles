@@ -109,6 +109,14 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 set incsearch
 
 "------------------------------------------------------
+"NERDTree
+"------------------------------------------------------
+" ファイルが指定された場合は非表示にし、指定なしの場合は表示する
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+
+"------------------------------------------------------
 " other
 "------------------------------------------------------
 " オートコンプリート用テンプレート
@@ -116,11 +124,11 @@ let g:sonictemplate_vim_template_dir = expand('~/dotfiles/vim/sonictemplate')
 imap <silent> <C-l> <plug>(sonictemplate-postfix)
 
 " coc.vim用
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -132,8 +140,8 @@ let g:neoterm_default_mod='belowright'
 let g:neoterm_size=20
 let g:neoterm_autoscroll=1
 tnoremap <silent> <C-w> <C-\><C-n><C-w>
-nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
-vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
+" nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
+" vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
 
 " キーバインド
 " Git
@@ -316,15 +324,6 @@ endif
 if dein#check_install()
   call dein#install()
 endif
-
-"------------------------------------------------------
-"NERDTree
-"------------------------------------------------------
-" ファイルが指定された場合は非表示にし、指定なしの場合は表示する
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" キーバインド
-map <C-n> :NERDTreeToggle<CR>
 
 "------------------------------------------------------
 " 色の設定
