@@ -97,29 +97,6 @@ let s:spaces_target_ft = {
 " vueファイルのシンタックスハイライト
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 
-" go用
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_chan_whitespace_error = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_space_tab_error = 1
-let g:go_highlight_trailing_whitespace_error = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_arguments = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_variable_assignments = 1
-let g:go_highlight_variable_declarations = 1
-let g:go_fmt_command = "goimports"
-let g:go_fmt_autosave = 1
-
-" タブを分割して定義元へジャンプ
-au FileType go nmap <leader>s <Plug>(go-def-split)
-au FileType go nmap <leader>v <Plug>(go-def-vertical)
-
 "------------------------------------------------------
 "search
 "------------------------------------------------------
@@ -226,6 +203,40 @@ nnoremap <C-P> :Files<CR>
 set wildmenu
 
 "------------------------------------------------------
+" Golang用の設定
+"------------------------------------------------------
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_chan_whitespace_error = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_trailing_whitespace_error = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_arguments = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_variable_assignments = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
+
+nmap <silent> gd :LspDefinition<CR>
+nmap <silent> <f2> :LspRename<CR>
+nmap <silent> <Leader>d :LspTypeDefinition<CR>
+nmap <silent> <Leader>r :LspReferences<CR>
+nmap <silent> <Leader>i :LspImplementation<CR>
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_popup_delay = 200
+let g:lsp_text_edit_enabled = 0
+
+" vim-lspを使用するので、vim-goの`Ctrl+]`を無効にする
+let g:go_def_mapping_enabled = 0
+
+"------------------------------------------------------
 "dein
 "------------------------------------------------------
 if &compatible
@@ -243,7 +254,12 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/unite.vim')
  " vim内で定義元にジャンプする
  call dein#add('szw/vim-tags')
- call dein#add('fatih/vim-go', {'do': ':GoInstallBinaries'})
+ call dein#add('prabirshrestha/async.vim')
+ call dein#add('prabirshrestha/asyncomplete.vim')
+ call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+ call dein#add('prabirshrestha/vim-lsp')
+ call dein#add('mattn/vim-lsp-settings')
+ call dein#add('mattn/vim-goimports')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
  call dein#add('tell-k/vim-browsereload-mac')
