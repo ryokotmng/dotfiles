@@ -174,14 +174,6 @@ tnoremap <silent> <C-w> <C-\><C-n><C-w>
 " nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
 " vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
 
-" キーバインド
-" Git
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gl :Glog<CR>
-nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>git :T lazygit<CR><C-w>ja
-
 " ファイルの保存と修了
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
