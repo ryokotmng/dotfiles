@@ -43,11 +43,15 @@ set noerrorbells
 let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
-"キーの割当て"
+"------------------------------------------------------
+" キーの割当て"
+"------------------------------------------------------
 let g:mapleader = "\<Space>"
 inoremap <silent> jj <ESC>
 nnoremap L $
 nnoremap H ^
+autocmd VimEnter * execute 'Defx'
+nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 
 "------------------------------------------------------
 " style
