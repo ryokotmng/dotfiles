@@ -69,6 +69,25 @@ function! s:denite_my_settings() abort
   \ denite#do_map('toggle_select').'j'
 endfunction
 
+map <Leader> <Plug>(easymotion-prefix)
+map <Leader> <Plug>(easymotion-prefix)
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+" nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
 "------------------------------------------------------
 " style
 "------------------------------------------------------
@@ -281,6 +300,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('prabirshrestha/vim-lsp')
  call dein#add('mattn/vim-lsp-settings')
  call dein#add('mattn/vim-goimports')
+ call dein#add('easymotion/vim-easymotion')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
  call dein#add('tell-k/vim-browsereload-mac')
