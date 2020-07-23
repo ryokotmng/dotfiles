@@ -33,6 +33,7 @@ $ brew install hub
 $ brew install neovim
 $ brew install tree
 $ brew install fzf
+$ brew install tig
 $ brew install --HEAD universal-ctags
 $ brew install the_silver_searcher
 $ gem install redcarpet pygments.rb

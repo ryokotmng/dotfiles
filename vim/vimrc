@@ -88,6 +88,22 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
+" tigを開く
+nnoremap <Leader>t :TigOpenProjectRootDir<CR>
+" 現在のファイルの履歴を見る
+nnoremap <Leader>T :TigOpenCurrentFile<CR>
+" パターンでtig grepする
+nnoremap <Leader>g :TigGrep<CR>
+" tig grepした内容を再呼び出しする
+nnoremap <Leader>r :TigGrepResume<CR>
+" 選択中のキーワードでtig grepする
+vnoremap <Leader>g y:TigGrep<Space><C-R>"<CR>
+" カーソル下のキーワードでtig grepする
+nnoremap <Leader>cg :<C-u>:TigGrep<Space><C-R><C-W><CR>
+
+" 現在のカーソル位置でtig blameする
+nnoremap <Leader>b :TigBlame<CR>
+
 autocmd FileType defx call s:defx_my_settings()
     function! s:defx_my_settings() abort
      " Define mappings
@@ -387,6 +403,7 @@ if dein#load_state('~/.cache/dein')
  let g:airline#extensions#tabline#buffer_idx_mode = 1
  let g:airline_theme='papercolor'
  let g:airline_powerline_fonts = 1
+ call dein#add('iberianpig/tig-explorer.vim')
 
  call dein#add('Shougo/defx.nvim')
  call dein#add('Shougo/denite.nvim')
