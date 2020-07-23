@@ -109,14 +109,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
 set incsearch
 
 "------------------------------------------------------
-"NERDTree
-"------------------------------------------------------
-" ファイルが指定された場合は非表示にし、指定なしの場合は表示する
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
-
-"------------------------------------------------------
 " other
 "------------------------------------------------------
 " オートコンプリート用テンプレート
@@ -297,7 +289,6 @@ if dein#load_state('~/.cache/dein')
  " rubocop
  call dein#add('w0rp/ale')
  " その他
- call dein#add('scrooloose/nerdtree')
  call dein#add('Shougo/neosnippet.vim')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('kassio/neoterm')
