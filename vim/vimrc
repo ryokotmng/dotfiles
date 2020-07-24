@@ -102,7 +102,7 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 " vimrcを操作
 nnoremap <Leader>. :new ~/.vimrc<CR>
-nnoremap <Leader>ss :source ~/.vimrc<CR>
+nnoremap <Leader>vimrc :source ~/.vimrc<CR>
 
 autocmd VimEnter * execute 'Defx'
 nnoremap <silent> <Leader>f :<C-u> Defx <CR>
