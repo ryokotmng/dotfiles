@@ -43,6 +43,8 @@ nnoremap H ^
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 
+" タブ
+nnoremap <leader>tab :Tnew<CR><C-w>ja
 " タブ移動
 nnoremap <leader>s <Nop>
 nnoremap <leader>sj <C-w>j
@@ -68,6 +70,7 @@ nnoremap <leader>ss :<C-u>sp<CR>
 nnoremap <leader>sv :<C-u>vs<CR>
 nnoremap <leader>sq :<C-u>q<CR>
 nnoremap <leader>sQ :<C-u>bd<CR>
+
 " vimgrep
 " nnoremap [q :cprevious<CR>   " 前へ
 " nnoremap ]q :cnext<CR>       " 次へ
@@ -113,15 +116,13 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
 nmap s <Plug>(easymotion-overwin-f2)
-
 " Turn on case insensitive feature
 let g:EasyMotion_smartcase = 1
-
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-" tigを開く
+" tig
 nnoremap <Leader>t :TigOpenProjectRootDir<CR>
 " 現在のファイルの履歴を見る
 nnoremap <Leader>T :TigOpenCurrentFile<CR>
@@ -137,9 +138,8 @@ nnoremap <Leader>cg :<C-u>:TigGrep<Space><C-R><C-W><CR>
 nnoremap <Leader>b :TigBlame<CR>
 
 " defx
-autocmd VimEnter * execute 'Defx'
-nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 autocmd FileType defx call s:defx_my_settings()
+nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
    \ defx#do_action('drop')
