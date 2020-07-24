@@ -44,16 +44,9 @@ if dein#load_state('~/.cache/dein')
  call dein#begin('~/.cache/dein')
 
  call dein#add('~/.cache/dein')
-  " プラグインリストを収めた TOML ファイル
- " 予め TOML ファイル（後述）を用意しておく
  let s:toml_dir  = $HOME . '/dotfiles/vim'
  let s:toml      = s:toml_dir . '/dein.toml'
- "let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
-
- " TOML を読み込み、キャッシュしておく
  call dein#load_toml(s:toml,      {'lazy': 0})
- "call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
 
  "call dein#add('Shougo/neco-vim')
  "" ファイルを開けるのを便利に
@@ -71,10 +64,7 @@ if dein#load_state('~/.cache/dein')
  "let g:table_mode_corner = '|'
  "" Syntaxハイライト
  "call dein#add('godlygeek/tabular')
- "call dein#add('plasticboy/vim-markdown')
  "call dein#add('suan/vim-instant-markdown')
- "call dein#add('slim-template/vim-slim')
- "call dein#add('simeji/winresizer')
  "call dein#add('Shougo/denite.nvim')
  "if !has('nvim')
  "  call dein#add('roxma/nvim-yarp')
@@ -365,10 +355,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" neoterm
-" let g:neoterm_default_mod='belowright'
-" let g:neoterm_size=20
-" let g:neoterm_autoscroll=1
 " fzf
 " ファイル一覧を出すときにプレビュー表示
 command! -bang -nargs=? -complete=dir Files
