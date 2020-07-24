@@ -206,14 +206,27 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
 endfunction
 call defx#custom#option('_', {
-      \ 'winwidth': 40,
-      \ 'split': 'vertical',
-      \ 'direction': 'topleft',
-      \ 'show_ignored_files': 1,
-      \ 'buffer_name': 'exlorer',
-      \ 'toggle': 1,
-      \ 'resume': 1,
-      \ })
+  \ 'winwidth': 40,
+  \ 'split': 'vertical',
+  \ 'direction': 'topleft',
+  \ 'show_ignored_files': 1,
+  \ 'buffer_name': 'exproler',
+  \ 'toggle': 1,
+  \ 'resume': 1,
+  \ 'columns': 'indent:git:icons:filename:mark',
+  \ })
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : '✹',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })
+autocmd BufWritePost * call defx#redraw()
+autocmd BufEnter * call defx#redraw()
 
 "------------------------------------------------------
 " style
@@ -411,6 +424,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('iberianpig/tig-explorer.vim')
 
  call dein#add('Shougo/defx.nvim')
+ call dein#add('kristijanhusak/defx-git')
  call dein#add('Shougo/denite.nvim')
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
