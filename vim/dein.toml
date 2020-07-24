@@ -1,0 +1,142 @@
+#=================================
+# syntax
+#=================================
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+#=================================
+# basic
+#=================================
+# make table
+[[plugins]]
+repo = 'mattn/vim-maketable'
+
+# quickrun buffer source cod
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# color scheme
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'thinca/vim-themis'
+
+[[plugins]]
+repo = 'skanehira/preview-markdown.vim'
+
+[[plugins]]
+repo = 'tyru/open-browser-github.vim'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+merged = 0
+
+[[plugins]]
+repo = 'iberianpig/tig-explorer.vim'
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+# fzf for vim
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+merged = 0
+
+[[plugins]]
+repo = 'previm/previm'
+
+# auto close parentheses
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+# resize window size on vim
+[[plugins]]
+repo = 'simeji/winresizer'
+
+# memo
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+
+# emmet for vim
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+# template
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+hook_add = '''
+let g:sonictemplate_vim_template_dir = ["~/.vim/template"]
+'''
+
+# show git diff
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+# git wrapper
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+
+# preview for the following Ex commands
+[[plugins]]
+repo = 'markonm/traces.vim'
+
+#=================================
+# Go
+#=================================
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+# language server protocol
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+# format text
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+# fuzzy finder
+[[plugins]]
+repo = 'junegunn/fzf'
+build_on = '''
+./install
+'''
+
+#=================================
+# Ruby
+#=================================
+
+# Rubocop
+[[plugins]]
+repo = 'w0rp/ale'

@@ -32,6 +32,65 @@ let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
 
 "------------------------------------------------------
+"dein
+"------------------------------------------------------
+if &compatible
+ set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+ call dein#begin('~/.cache/dein')
+
+ call dein#add('~/.cache/dein')
+  " プラグインリストを収めた TOML ファイル
+ " 予め TOML ファイル（後述）を用意しておく
+ let s:toml_dir  = $HOME . '/dotfiles/vim'
+ let s:toml      = s:toml_dir . '/dein.toml'
+ "let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
+
+ " TOML を読み込み、キャッシュしておく
+ call dein#load_toml(s:toml,      {'lazy': 0})
+ "call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
+
+ "call dein#add('Shougo/neco-vim')
+ "" ファイルを開けるのを便利に
+ "call dein#add('Shougo/unite.vim')
+ "" 定義元ジャンプ
+ "call dein#add('szw/vim-tags')
+ "call dein#add('prabirshrestha/async.vim')
+ "call dein#add('prabirshrestha/asyncomplete.vim')
+ "call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+"" call dein#add('prabirshrestha/vim-lsp')
+"" call dein#add('mattn/vim-lsp-settings')
+"" call dein#add('mattn/vim-goimports')
+ "" 表を簡単に作る
+ "call dein#add('dhruvasagar/vim-table-mode')
+ "let g:table_mode_corner = '|'
+ "" Syntaxハイライト
+ "call dein#add('godlygeek/tabular')
+ "call dein#add('plasticboy/vim-markdown')
+ "call dein#add('suan/vim-instant-markdown')
+ "call dein#add('slim-template/vim-slim')
+ "call dein#add('simeji/winresizer')
+ "call dein#add('Shougo/denite.nvim')
+ "if !has('nvim')
+ "  call dein#add('roxma/nvim-yarp')
+ "  call dein#add('roxma/vim-hug-neovim-rpc')
+ "endif
+
+ call dein#end()
+ call dein#save_state()
+endif
+
+"未インストールのものがあったら自動的にインストール
+if dein#check_install()
+  call dein#install()
+endif
+
+"------------------------------------------------------
 " キーバインド
 "------------------------------------------------------
 let g:mapleader = "\<Space>"
@@ -322,11 +381,8 @@ set wildmenu
 "------------------------------------------------------
 " Golang用の設定
 "------------------------------------------------------
-let g:go_highlight_array_whitespace_error = 1
-let g:go_highlight_chan_whitespace_error = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_space_tab_error = 1
-let g:go_highlight_trailing_whitespace_error = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_arguments = 1
@@ -341,7 +397,7 @@ let g:go_highlight_variable_assignments = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
-let g:go_gopls_enabled = 0
+" let g:go_gopls_enabled = 0
 
 nmap <silent> gd :LspDefinition<CR>
 nmap <silent> <f2> :LspRename<CR>
@@ -350,99 +406,17 @@ nmap <silent> <Leader>r :LspReferences<CR>
 nmap <silent> <Leader>i :LspImplementation<CR>
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_popup_delay = 200
+"let g:asyncomplete_popup_delay = 200
 let g:lsp_text_edit_enabled = 0
-
-" vim-lspを使用するので、vim-goの`Ctrl+]`を無効にする
-" let g:go_def_mapping_enabled = 0
-
-"------------------------------------------------------
-"dein
-"------------------------------------------------------
-if &compatible
- set nocompatible
-endif
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-
-if dein#load_state('~/.cache/dein')
- call dein#begin('~/.cache/dein')
-
- call dein#add('~/.cache/dein')
- call dein#add('Shougo/neco-vim')
- " ファイルを開けるのを便利に
- call dein#add('Shougo/unite.vim')
- " 定義元ジャンプ
- call dein#add('szw/vim-tags')
- call dein#add('prabirshrestha/async.vim')
- call dein#add('prabirshrestha/asyncomplete.vim')
- call dein#add('prabirshrestha/asyncomplete-lsp.vim')
-" call dein#add('prabirshrestha/vim-lsp')
-" call dein#add('mattn/vim-lsp-settings')
-" call dein#add('mattn/vim-goimports')
- call dein#add('easymotion/vim-easymotion')
- " マークアップ用
- call dein#add('mattn/emmet-vim')
- call dein#add('tell-k/vim-browsereload-mac')
- " 表を簡単に作る
- call dein#add('dhruvasagar/vim-table-mode')
- let g:table_mode_corner = '|'
- " 空白をハイライト
- call dein#add('bronson/vim-trailing-whitespace')
- " Syntaxハイライト
- call dein#add('digitaltoad/vim-pug')
- call dein#add('leafgarland/typescript-vim')
- call dein#add('peitalin/vim-jsx-typescript')
- call dein#add('godlygeek/tabular')
- call dein#add('plasticboy/vim-markdown')
- call dein#add('suan/vim-instant-markdown')
- call dein#add('slim-template/vim-slim')
- call dein#add('simeji/winresizer')
- call dein#add('hashivim/vim-terraform')
- " オートコンプリート
- " call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly', 'branch': 'release'})
- call dein#add('junegunn/fzf', {'build': './install --all'})
- call dein#add('junegunn/fzf.vim')
- call dein#add('mattn/sonictemplate-vim')
- call dein#add('tpope/vim-endwise')
- call dein#add('Townk/vim-autoclose')
- " rubocop
- call dein#add('w0rp/ale')
- " その他
- call dein#add('Shougo/neosnippet.vim')
- call dein#add('Shougo/neosnippet-snippets')
- " call dein#add('kassio/neoterm')
- call dein#add('airblade/vim-gitgutter')
- call dein#add('Lokaltog/vim-powerline')
- call dein#add('vim-airline/vim-airline')
- call dein#add('vim-airline/vim-airline-themes')
- set laststatus=2
- let g:airline#extensions#tabline#enabled = 1
- let g:airline#extensions#tabline#buffer_idx_mode = 1
- let g:airline_theme='papercolor'
- let g:airline_powerline_fonts = 1
- call dein#add('iberianpig/tig-explorer.vim')
-
- call dein#add('Shougo/defx.nvim')
- call dein#add('kristijanhusak/defx-git')
- call dein#add('Shougo/denite.nvim')
- if !has('nvim')
-   call dein#add('roxma/nvim-yarp')
-   call dein#add('roxma/vim-hug-neovim-rpc')
- endif
-
- call dein#end()
- call dein#save_state()
-endif
-
-"未インストールのものがあったら自動的にインストール
-if dein#check_install()
-  call dein#install()
-endif
 
 "------------------------------------------------------
 " 色の設定
 "------------------------------------------------------
+" set laststatus=2
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#buffer_idx_mode = 1
+" let g:airline_theme='papercolor'
+" let g:airline_powerline_fonts = 1
 colorscheme iceberg
 " 色の設定
 set t_Co=256
