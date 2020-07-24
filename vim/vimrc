@@ -50,7 +50,7 @@ let g:mapleader = "\<Space>"
 inoremap <silent> jj <ESC>
 nnoremap L $
 nnoremap H ^
-tnoremap <silent> <C-w> <C-\><C-n><C-w>
+" tnoremap <silent> <C-w> <C-\><C-n><C-w>
 " nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
 " vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
 
@@ -59,7 +59,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 
 " タブ
-nnoremap <leader>tab :Tnew<CR><C-w>ja
+" nnoremap <leader>tab :Tnew<CR><C-w>ja
 nnoremap (keymapping) :T (command)<CR>
 nnoremap (keymapping) :T (command)<CR><C-w>h
 
@@ -89,10 +89,10 @@ nnoremap <leader>sv :<C-u>vs<CR>
 nnoremap <leader>sq :<C-u>q<CR>
 nnoremap <leader>sQ :<C-u>bd<CR>
 " vimgrep
-nnoremap [q :cprevious<CR>   " 前へ
-nnoremap ]q :cnext<CR>       " 次へ
-nnoremap [Q :<C-u>cfirst<CR> " 最初へ
-nnoremap ]Q :<C-u>clast<CR>  " 最後へ
+" nnoremap [q :cprevious<CR>   " 前へ
+" nnoremap ]q :cnext<CR>       " 次へ
+" nnoremap [Q :<C-u>cfirst<CR> " 最初へ
+" nnoremap ]Q :<C-u>clast<CR>  " 最後へ
 
 " 置換
 nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
