@@ -5,40 +5,28 @@
 set noswapfile
 " ウインドウのタイトルバーにファイルのパス情報等を表示する
 set title
-" カーソルが何行目の何列目に置かれているかを表示する
-set ruler
 " ステータスラインとタブライン
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set showtabline=2
-
 " 保存されていないファイルがあるときでも別のファイルを開くことが出来る
 set hidden
-" 行番号を振る
-set number
 " 内容が変更されたら自動的に再読み込み
 set autoread
-
 " 自動補完
 set completeopt=menuone
 for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
   exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
 endfor
-
-" scrollの際、必ず上下にある行数
-set scrolloff=5
 " 括弧の対応を見せる設定とその時間（秒）
 set showmatch matchtime=1
 "補完メニュー(変換候補の出てくるやつ)の高さ
 set pumheight=10
-" backspace有効
-set backspace=indent,eol,start
 " Prevent from opening scratch preview
 set completeopt=menuone
 " ビープ音を鳴らさずエラーメッセージを表示する
 set visualbell t_vb=
 set noerrorbells
-
 " ウィンドウの分割サイズ変更を1ずつ動くように
 let g:winresizer_vert_resize = 1
 let g:winresizer_horiz_resize = 1
@@ -50,18 +38,10 @@ let g:mapleader = "\<Space>"
 inoremap <silent> jj <ESC>
 nnoremap L $
 nnoremap H ^
-" tnoremap <silent> <C-w> <C-\><C-n><C-w>
-" nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
-" vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
 
 " ファイルの保存と修了
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
-
-" タブ
-" nnoremap <leader>tab :Tnew<CR><C-w>ja
-" nnoremap (keymapping) :T (command)<CR>
-" nnoremap (keymapping) :T (command)<CR><C-w>h
 
 " タブ移動
 nnoremap <leader>s <Nop>
@@ -103,9 +83,6 @@ au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 " vimrcを操作
 nnoremap <Leader>. :new ~/.vimrc<CR>
 nnoremap <Leader>vimrc :source ~/.vimrc<CR>
-
-autocmd VimEnter * execute 'Defx'
-nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 
 " denite
 autocmd FileType denite call s:denite_my_settings()
@@ -160,6 +137,8 @@ nnoremap <Leader>cg :<C-u>:TigGrep<Space><C-R><C-W><CR>
 nnoremap <Leader>b :TigBlame<CR>
 
 " defx
+autocmd VimEnter * execute 'Defx'
+nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
@@ -369,7 +348,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/neco-vim')
  " ファイルを開けるのを便利に
  call dein#add('Shougo/unite.vim')
- " vim内で定義元にジャンプする
+ " 定義元ジャンプ
  call dein#add('szw/vim-tags')
  call dein#add('prabirshrestha/async.vim')
  call dein#add('prabirshrestha/asyncomplete.vim')
