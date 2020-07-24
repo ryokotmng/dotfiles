@@ -280,6 +280,12 @@ call defx#custom#column('git', 'indicators', {
 autocmd BufWritePost * call defx#redraw()
 autocmd BufEnter * call defx#redraw()
 
+" fzf
+nnoremap <leader>file :Files<CR>
+nnoremap <leader>gst :GFiles?<CR>
+nnoremap <leader>com :Commands<CR>
+nnoremap <leader>map :Maps<CR>
+
 "------------------------------------------------------
 " style
 "------------------------------------------------------
@@ -362,7 +368,6 @@ endfunction
 " ファイル一覧を出すときにプレビュー表示
 command! -bang -nargs=? -complete=dir Files
             \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-nnoremap <C-P> :Files<CR>
 
 " ステータスラインにコマンドの候補を表示
 set wildmenu
