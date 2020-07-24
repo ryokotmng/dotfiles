@@ -9,7 +9,6 @@ export XDG_CACHE_HOME=~/.cache
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$GOPATH/bin
-export GO111MODULE=on
 
 # Ruby用
 export PATH=$HOME/.rbenv/shims:$PATH
@@ -27,3 +26,4 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export PATH="/usr/local/opt/swagger-codegen@2/bin:$PATH"

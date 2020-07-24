@@ -153,6 +153,8 @@ zle -N peco-cdr
 bindkey '^x' peco-cdr
 
 
+alias vim='nvim'
+
 # ブランチを簡単切り替え。git checkout lbで実行できる
 alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
 
@@ -162,3 +164,12 @@ alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 
 # rupa/z用 よく使うフォルダに移動する
 source ~/.vim/z/z.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ryokotominaga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryokotominaga/google-cloud-sdk/completion.zsh.inc'; fi
+
+alias onelogin-aws-login="docker run -v $HOME:/root -i -t koid/awscli-with-onelogin onelogin-aws-login $@"
+alias aws="docker run -v $HOME:/root koid/awscli-with-onelogin aws $@"
