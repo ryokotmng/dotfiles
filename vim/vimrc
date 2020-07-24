@@ -81,7 +81,7 @@ nnoremap <leader>sQ :<C-u>bd<CR>
 nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
 
 " grepした結果をquickfixに表示する
-au QuickfixCmdPost make,grep,grepadd,vimgrep copen
+" au QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 " vimrcを操作
 nnoremap <Leader>. :new ~/.vimrc<CR>
@@ -285,9 +285,9 @@ function! s:check_back_space() abort
 endfunction
 
 " neoterm
-let g:neoterm_default_mod='belowright'
-let g:neoterm_size=20
-let g:neoterm_autoscroll=1
+" let g:neoterm_default_mod='belowright'
+" let g:neoterm_size=20
+" let g:neoterm_autoscroll=1
 " fzf
 " ファイル一覧を出すときにプレビュー表示
 command! -bang -nargs=? -complete=dir Files
@@ -330,7 +330,7 @@ let g:asyncomplete_popup_delay = 200
 let g:lsp_text_edit_enabled = 0
 
 " vim-lspを使用するので、vim-goの`Ctrl+]`を無効にする
-let g:go_def_mapping_enabled = 0
+" let g:go_def_mapping_enabled = 0
 
 "------------------------------------------------------
 "dein
@@ -353,9 +353,9 @@ if dein#load_state('~/.cache/dein')
  call dein#add('prabirshrestha/async.vim')
  call dein#add('prabirshrestha/asyncomplete.vim')
  call dein#add('prabirshrestha/asyncomplete-lsp.vim')
- call dein#add('prabirshrestha/vim-lsp')
- call dein#add('mattn/vim-lsp-settings')
- call dein#add('mattn/vim-goimports')
+" call dein#add('prabirshrestha/vim-lsp')
+" call dein#add('mattn/vim-lsp-settings')
+" call dein#add('mattn/vim-goimports')
  call dein#add('easymotion/vim-easymotion')
  " マークアップ用
  call dein#add('mattn/emmet-vim')
@@ -376,7 +376,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('simeji/winresizer')
  call dein#add('hashivim/vim-terraform')
  " オートコンプリート
- call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly', 'branch': 'release'})
+ " call dein#add('neoclide/coc.nvim', {'build': './install.sh nightly', 'branch': 'release'})
  call dein#add('junegunn/fzf', {'build': './install --all'})
  call dein#add('junegunn/fzf.vim')
  call dein#add('mattn/sonictemplate-vim')
@@ -387,13 +387,12 @@ if dein#load_state('~/.cache/dein')
  " その他
  call dein#add('Shougo/neosnippet.vim')
  call dein#add('Shougo/neosnippet-snippets')
- call dein#add('kassio/neoterm')
+ " call dein#add('kassio/neoterm')
  call dein#add('airblade/vim-gitgutter')
  call dein#add('Lokaltog/vim-powerline')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  set laststatus=2
- set t_Co=256 " この設定がないと色が正しく表示されない
  let g:airline#extensions#tabline#enabled = 1
  let g:airline#extensions#tabline#buffer_idx_mode = 1
  let g:airline_theme='papercolor'
