@@ -108,13 +108,6 @@ repo = 'lambdalisue/gina.vim'
 [[plugins]]
 repo = 'markonm/traces.vim'
 
-#=================================
-# Go
-#=================================
-[[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-
 # language server protocol
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
