@@ -92,8 +92,11 @@ nnoremap H ^
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
 
-" ターミナル
+" ターミナル機能
 nnoremap <leader>term :terminal<CR>a
+nnoremap <leader>sterm :sbuffer<CR><Enter><CR>:terminal<CR>a
+nnoremap <leader>vterm :vert sb<CR><Enter><CR>:terminal<CR>a
+
 " タブ移動
 nnoremap <leader>s <Nop>
 nnoremap <leader>sj <C-w>j
