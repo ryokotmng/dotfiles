@@ -50,6 +50,60 @@ let g:mapleader = "\<Space>"
 inoremap <silent> jj <ESC>
 nnoremap L $
 nnoremap H ^
+tnoremap <silent> <C-w> <C-\><C-n><C-w>
+" nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
+" vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
+
+" ファイルの保存と修了
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q!<CR>
+
+" タブ
+nnoremap <leader>tab :Tnew<CR><C-w>ja
+nnoremap (keymapping) :T (command)<CR>
+nnoremap (keymapping) :T (command)<CR><C-w>h
+
+" タブ移動
+nnoremap <leader>s <Nop>
+nnoremap <leader>sj <C-w>j
+nnoremap <leader>sk <C-w>k
+nnoremap <leader>sl <C-w>l
+nnoremap <leader>sh <C-w>h
+nnoremap <leader>sJ <C-w>J
+nnoremap <leader>sK <C-w>K
+nnoremap <leader>sL <C-w>L
+nnoremap <leader>sH <C-w>H
+nnoremap <leader>sn gt
+nnoremap <leader>sp gT
+nnoremap <leader>sr <C-w>r
+nnoremap <leader>s= <C-w>=
+nnoremap <leader>sw <C-w>w
+nnoremap <leader>so <C-w>_<C-w>|
+nnoremap <leader>sO <C-w>=
+nnoremap <leader>sN :<C-u>bn<CR>
+nnoremap <leader>sP :<C-u>bp<CR>
+nnoremap <leader>st :<C-u>tabnew<CR>
+nnoremap <leader>sT :<C-u>Unite tab<CR>
+nnoremap <leader>ss :<C-u>sp<CR>
+nnoremap <leader>sv :<C-u>vs<CR>
+nnoremap <leader>sq :<C-u>q<CR>
+nnoremap <leader>sQ :<C-u>bd<CR>
+" vimgrep
+nnoremap [q :cprevious<CR>   " 前へ
+nnoremap ]q :cnext<CR>       " 次へ
+nnoremap [Q :<C-u>cfirst<CR> " 最初へ
+nnoremap ]Q :<C-u>clast<CR>  " 最後へ
+
+" 置換
+nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
+
+" grepした結果をquickfixに表示する
+au QuickfixCmdPost make,grep,grepadd,vimgrep copen
+
+" vimrcを操作
+nnoremap <Leader>. :new ~/.vimrc<CR>
+nnoremap <Leader>ss :source ~/.vimrc<CR>
+
 autocmd VimEnter * execute 'Defx'
 nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 
@@ -239,60 +293,6 @@ endfunction
 let g:neoterm_default_mod='belowright'
 let g:neoterm_size=20
 let g:neoterm_autoscroll=1
-tnoremap <silent> <C-w> <C-\><C-n><C-w>
-" nnoremap <silent> <C-n> :TREPLSendLine<CR>j0
-" vnoremap <silent> <C-n> V:TREPLSendSelection<CR>'>j0
-
-" ファイルの保存と修了
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q!<CR>
-
-" タブ
-nnoremap <leader>tab :Tnew<CR><C-w>ja
-nnoremap (keymapping) :T (command)<CR>
-nnoremap (keymapping) :T (command)<CR><C-w>h
-
-" タブ移動
-nnoremap <leader>s <Nop>
-nnoremap <leader>sj <C-w>j
-nnoremap <leader>sk <C-w>k
-nnoremap <leader>sl <C-w>l
-nnoremap <leader>sh <C-w>h
-nnoremap <leader>sJ <C-w>J
-nnoremap <leader>sK <C-w>K
-nnoremap <leader>sL <C-w>L
-nnoremap <leader>sH <C-w>H
-nnoremap <leader>sn gt
-nnoremap <leader>sp gT
-nnoremap <leader>sr <C-w>r
-nnoremap <leader>s= <C-w>=
-nnoremap <leader>sw <C-w>w
-nnoremap <leader>so <C-w>_<C-w>|
-nnoremap <leader>sO <C-w>=
-nnoremap <leader>sN :<C-u>bn<CR>
-nnoremap <leader>sP :<C-u>bp<CR>
-nnoremap <leader>st :<C-u>tabnew<CR>
-nnoremap <leader>sT :<C-u>Unite tab<CR>
-nnoremap <leader>ss :<C-u>sp<CR>
-nnoremap <leader>sv :<C-u>vs<CR>
-nnoremap <leader>sq :<C-u>q<CR>
-nnoremap <leader>sQ :<C-u>bd<CR>
-" vimgrep
-nnoremap [q :cprevious<CR>   " 前へ
-nnoremap ]q :cnext<CR>       " 次へ
-nnoremap [Q :<C-u>cfirst<CR> " 最初へ
-nnoremap ]Q :<C-u>clast<CR>  " 最後へ
-
-" 置換
-nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
-
-" grepした結果をquickfixに表示する
-au QuickfixCmdPost make,grep,grepadd,vimgrep copen
-
-" vimrcを操作
-nnoremap <Leader>. :new ~/.vimrc<CR>
-nnoremap <Leader>ss :source ~/.vimrc<CR>
-
 " fzf
 " ファイル一覧を出すときにプレビュー表示
 command! -bang -nargs=? -complete=dir Files
