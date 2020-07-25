@@ -97,6 +97,10 @@ nnoremap <leader>term :terminal<CR>a
 nnoremap <leader>sterm :sbuffer<CR><Enter><CR>:terminal<CR>a
 nnoremap <leader>vterm :vert sb<CR><Enter><CR>:terminal<CR>a
 
+" バッファ移動
+nnoremap <silent> <C-j> :bprev<CR>
+nnoremap <silent> <C-k> :bnext<CR>
+
 " タブ移動
 nnoremap <leader>s <Nop>
 nnoremap <leader>sj <C-w>j
