@@ -50,10 +50,6 @@ repo = 'tyru/open-browser-github.vim'
 repo = 'tyru/open-browser.vim'
 
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
-merged = 0
-
-[[plugins]]
 repo = 'Shougo/defx.nvim'
 
 [[plugins]]
@@ -116,7 +112,6 @@ repo = 'markonm/traces.vim'
 
 # language server protocol
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
 
 # format text
 [[plugins]]
