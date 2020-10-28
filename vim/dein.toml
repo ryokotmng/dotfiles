@@ -112,6 +112,11 @@ repo = 'markonm/traces.vim'
 
 # language server protocol
 [[plugins]]
+repo = 'neoclide/coc.nvim'
+rev="release"
+hook_source = '''
+source ~/.config/nvim/plugins/coc.rc.vim
+'''
 
 # format text
 [[plugins]]
