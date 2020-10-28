@@ -10,6 +10,12 @@ repo = 'plasticboy/vim-markdown'
 [[plugins]]
 repo = 'cespare/vim-toml'
 
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'cespare/vim-go'
+
 #=================================
 # basic
 #=================================
