@@ -48,29 +48,6 @@ if dein#load_state('~/.cache/dein')
  let s:toml      = s:toml_dir . '/dein.toml'
  call dein#load_toml(s:toml,      {'lazy': 0})
 
- "call dein#add('Shougo/neco-vim')
- "" ファイルを開けるのを便利に
- "call dein#add('Shougo/unite.vim')
- "" 定義元ジャンプ
- "call dein#add('szw/vim-tags')
- "call dein#add('prabirshrestha/async.vim')
- "call dein#add('prabirshrestha/asyncomplete.vim')
- "call dein#add('prabirshrestha/asyncomplete-lsp.vim')
-"" call dein#add('prabirshrestha/vim-lsp')
-"" call dein#add('mattn/vim-lsp-settings')
-"" call dein#add('mattn/vim-goimports')
- "" 表を簡単に作る
- "call dein#add('dhruvasagar/vim-table-mode')
- "let g:table_mode_corner = '|'
- "" Syntaxハイライト
- "call dein#add('godlygeek/tabular')
- "call dein#add('suan/vim-instant-markdown')
- "call dein#add('Shougo/denite.nvim')
- "if !has('nvim')
- "  call dein#add('roxma/nvim-yarp')
- "  call dein#add('roxma/vim-hug-neovim-rpc')
- "endif
-
  call dein#end()
  call dein#save_state()
 endif
@@ -355,13 +332,6 @@ set incsearch
 " オートコンプリート用テンプレート
 let g:sonictemplate_vim_template_dir = expand('~/dotfiles/vim/sonictemplate')
 imap <silent> <C-l> <plug>(sonictemplate-postfix)
-
-" coc.vim用
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
