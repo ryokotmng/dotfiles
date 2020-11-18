@@ -67,6 +67,9 @@ repo = 'bronson/vim-trailing-whitespace'
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 
+[[plugins]]
+repo = 'tpope/vim-surround'
+
 # fzf for vim
 [[plugins]]
 repo = 'junegunn/fzf.vim'
