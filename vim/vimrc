@@ -266,11 +266,33 @@ nnoremap <leader>file :Files<CR>
 nnoremap <leader>gst :GFiles?<CR>
 nnoremap <leader>com :Commands<CR>
 nnoremap <leader>map :Maps<CR>
+nnoremap <silent>fzf :Files<CR>
+nnoremap <silent>ls :Buffers<CR>
+nnoremap <Leader>k :bd<CR>
 
-" fzf
 " ファイル一覧を出すときにプレビュー表示
 command! -bang -nargs=? -complete=dir Files
             \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+command! FZFMru call fzf#run({
+\  'source':  v:oldfiles,
+\  'sink':    'e',
+\  'options': '-m -x +s',
+\  'down':    '40%'})
+" fzf
+set rtp+=/usr/local/opt/fzf
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+command! -bang -nargs=* Pt
+  \ call fzf#vim#grep(
+  \   'pt --column --ignore=.git --global-gitignore '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview({ 'dir': s:find_git_root() }),
+  \   <bang>0)
 
 " coc.vim
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
