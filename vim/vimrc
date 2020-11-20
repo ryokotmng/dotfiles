@@ -266,8 +266,6 @@ nnoremap <leader>file :Files<CR>
 nnoremap <leader>gst :GFiles?<CR>
 nnoremap <leader>com :Commands<CR>
 nnoremap <leader>map :Maps<CR>
-nnoremap <leader>ag :Ag<CR>
-nnoremap <leader>rg :Rg<CR>
 
 " fzf
 " ファイル一覧を出すときにプレビュー表示
@@ -282,6 +280,13 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" カーソル下にある単語を検索
+nnoremap <silent> <leader>ag :Ag <C-R><C-W><CR>
+nnoremap <silent> <leader>AG :Ag <C-R><C-A><CR>
+" visual modeで選択したwordを検索
+xnoremap <silent> <leader>ag  y:Ag <C-R>"<CR>
+nnoremap <silent> <leader>cag :Ag <CR>
+nnoremap <silent> <leader>crg :Rg <CR>
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
