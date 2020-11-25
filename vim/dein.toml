@@ -16,6 +16,9 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'cespare/vim-go'
 
+[[plugins]]
+repo = 'jparise/vim-graphql'
+
 #=================================
 # basic
 #=================================
