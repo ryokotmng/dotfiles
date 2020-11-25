@@ -19,6 +19,11 @@ Clone dotfiles by using git.
 $ git clone https://github.com/ryokotmng/dotfiles.git
 ```
 
+Install nodenv for frontend development.
+```
+$ clone git://github.com/nodenv/nodenv.git ~/.nodenv
+```
+
 ## Install Plugins
 
 fugitive
