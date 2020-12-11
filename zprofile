@@ -61,3 +61,5 @@ function update_node_path(){
 # ディレクリ変更時にupdate_node_pathを実行する
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd update_node_path
+
+source ~/google-cloud-sdk/path.zsh.inc
