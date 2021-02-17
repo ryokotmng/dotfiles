@@ -11,6 +11,11 @@ set clipboard=unnamed,autoselect
 " 検索単語のハイライト
 set hlsearch
 
+" easymotionの設定
+set easymotion
+" sで開始
+nmap s <Plug>(easymotion-s2)
+
 "キーの割当て"
 inoremap <silent> jj <ESC>
 nnoremap L $
