@@ -11,18 +11,12 @@ $ brew install git
 $ git config --global user.name "USER_NAME"
 $ git config --global user.email email@example.com
 $ git config --global tag.sort version:refname
-$ brew install lazygit
 ```
 
 Clone dotfiles by using git.
 ```
-$ git clone https://github.com/ryokotmng/dotfiles.git
-$ cd dotfiles && sh vim/install.sh
-```
-
-Install nodenv for frontend development.
-```
-$ clone git://github.com/nodenv/nodenv.git ~/.nodenv
+$ cd && git clone https://github.com/ryokotmng/dotfiles.git
+$ sh dotfiles/setup.sh
 ```
 
 ##### dein
@@ -38,6 +32,7 @@ If dein doesn't work properly, open vim and install dein
 ### Install neovim
 Python2 and Python3 needed.
 ```
+$ mkdir ~/.config/nvim
 see [this](https://qiita.com/yuku_t/items/6db331e7084f88b43fe4) for Python setup.
 $ brew install pyenv-virtualenv
 $ brew install pyenv && pyenv install 2.7.13
