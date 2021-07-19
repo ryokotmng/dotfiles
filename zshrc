@@ -163,7 +163,7 @@ alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^
 alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 
 # rupa/z用 よく使うフォルダに移動する
-source ~/.vim/z/z.sh
+source ~/z/z.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc'; fi
