@@ -29,8 +29,8 @@ eval "$(pyenv init -)"
 export PATH="/usr/local/opt/swagger-codegen@2/bin:$PATH"
 
 # node.js用
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+# export PATH="$HOME/.nodenv/bin:$PATH"
+# eval "$(nodenv init -)"
 
 # 引数に渡した文字列をPATHに追加する
 function append_path() { remove_path $1; export PATH=$PATH:$1; }
@@ -62,4 +62,3 @@ function update_node_path(){
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd update_node_path
 
-source ~/google-cloud-sdk/path.zsh.inc

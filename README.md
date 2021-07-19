@@ -17,6 +17,7 @@ $ brew install lazygit
 Clone dotfiles by using git.
 ```
 $ git clone https://github.com/ryokotmng/dotfiles.git
+$ cd dotfiles && sh vim/install.sh
 ```
 
 Install nodenv for frontend development.
@@ -24,18 +25,46 @@ Install nodenv for frontend development.
 $ clone git://github.com/nodenv/nodenv.git ~/.nodenv
 ```
 
-## Install Plugins
+##### dein
+Under ~/dotfiles
+To install dein, see [Github page](https://github.com/Shougo/dein.vim).
+Dein automatically install plugins when vim starts.
 
-fugitive
+If dein doesn't work properly, open vim and install dein
+```
+:call dein#install()
+```
+
+### Install neovim
+Python2 and Python3 needed.
+```
+see [this](https://qiita.com/yuku_t/items/6db331e7084f88b43fe4) for Python setup.
+$ brew install pyenv-virtualenv
+$ brew install pyenv && pyenv install 2.7.13
+$ pyenv virtualenv 2.7.13 neovim-2
+$ brew install neovim
+```
+Create fle link to use neovim
+```
+$ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
+```
+Please check ':CheckHealth' if something wrong.
+
+## Install Other Plugins
+
+### fugitive
 under ~/dotfiles/.vim/bundler
 ```
 git clone https://github.com/tpope/vim-fugitive.git
 ```
 
+### rupa/z
+Need git clone to ~/.vim
+- rupa/z
+
 others
 ```
 $ brew install hub
-$ brew install neovim
 $ brew install tree
 $ brew install fzf
 $ brew install tig
@@ -44,28 +73,4 @@ $ brew install the_silver_searcher
 $ gem install redcarpet pygments.rb
 $ npm -g install instant-markdown-d
 ```
-Create fle link to use neovim
-```
-$ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
-```
-neovim may require to install itself in some languages, please check ':CheckHealth'.
 
-Need git clone to ~/.vim
-- rupa/z
-
-##### dein
-Under ~/dotfiles
-Create linked dotfiles in home directory.
-```
-$ sh link.sh
-```
-dein
-```
-$ sh ./installer.sh ~/.cache/dein
-```
-Then Dein automatically install plugins when vim starts.
-
-If dein doesn't work properly, open vim and install dein
-```
-:call dein#install()
-```
