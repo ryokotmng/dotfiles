@@ -42,22 +42,3 @@ Create fle link to use neovim
 $ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
 ```
 Please check ':CheckHealth' if something wrong.
-
-## Install Other Plugins
-
-### fugitive
-under ~/dotfiles/.vim/bundler
-```
-git clone https://github.com/tpope/vim-fugitive.git
-```
-
-others if needed.
-```
-$ brew install hub
-$ brew install tig
-$ brew install --HEAD universal-ctags
-$ brew install the_silver_searcher
-$ gem install redcarpet pygments.rb
-$ npm -g install instant-markdown-d
-```
-
