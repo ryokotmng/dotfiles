@@ -34,10 +34,8 @@ Python2 and Python3 needed.
 ```
 $ mkdir ~/.config/nvim
 see [this](https://qiita.com/yuku_t/items/6db331e7084f88b43fe4) for Python setup.
-$ brew install pyenv-virtualenv
-$ brew install pyenv && pyenv install 2.7.13
+$ pyenv install 2.7.13
 $ pyenv virtualenv 2.7.13 neovim-2
-$ brew install neovim
 ```
 Create fle link to use neovim
 ```
@@ -53,15 +51,9 @@ under ~/dotfiles/.vim/bundler
 git clone https://github.com/tpope/vim-fugitive.git
 ```
 
-### rupa/z
-Need git clone to ~/.vim
-- rupa/z
-
-others
+others if needed.
 ```
 $ brew install hub
-$ brew install tree
-$ brew install fzf
 $ brew install tig
 $ brew install --HEAD universal-ctags
 $ brew install the_silver_searcher
