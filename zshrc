@@ -171,8 +171,6 @@ if [ -f '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/r
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryokotominaga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryokotominaga/google-cloud-sdk/completion.zsh.inc'; fi
 
-alias onelogin-aws-login="docker run -v $HOME:/root -i -t koid/awscli-with-onelogin onelogin-aws-login $@"
-alias aws="docker run -v $HOME:/root koid/awscli-with-onelogin aws $@"
 eval "$(direnv hook zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
