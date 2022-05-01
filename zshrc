@@ -91,11 +91,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias ctags="`brew --prefix`/bin/ctags"
 alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
 alias vi='nvim'
 alias gh='cd $(ghq list -p | peco)'
 alias gho='gh-open $(ghq list -p | peco)'
+alias psgrep='ps aux | grep'
 function find_cd() {
     cd "$(find . -type d | peco)"
 }
@@ -159,8 +161,11 @@ alias vim='nvim'
 alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
 
 
-# dockerコンテナに入る。deで実行できる
+# dockerコンテナに入る
 alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
+
+alias vimrc='vi ~/dotfiles/vim/vimrc'
+alias zshrc='vi ~/dotfiles/zshrc'
 
 # rupa/z用 よく使うフォルダに移動する
 source ~/z/z.sh
