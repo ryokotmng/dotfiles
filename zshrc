@@ -156,6 +156,9 @@ bindkey '^x' peco-cdr
 
 
 alias vim='nvim'
+alias mov2gif='(){ ffmpeg -i $1.mov -r 10 $1.gif }'
+alias vimrc='vi ~/dotfiles/vim/vimrc'
+alias zshrc='vi ~/dotfiles/zshrc'
 
 # ブランチを簡単切り替え。git checkout lbで実行できる
 alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
@@ -164,18 +167,10 @@ alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^
 # dockerコンテナに入る
 alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 
-alias vimrc='vi ~/dotfiles/vim/vimrc'
-alias zshrc='vi ~/dotfiles/zshrc'
-
 # rupa/z用 よく使うフォルダに移動する
 source ~/z/z.sh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ryokotominaga/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ryokotominaga/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ryokotominaga/google-cloud-sdk/completion.zsh.inc'; fi
-
+# Python用
 eval "$(direnv hook zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
