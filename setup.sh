@@ -9,6 +9,7 @@ brew install pyenv && brew install pyenv-virtualenv
 brew install neovim
 brew install asdf
 brew install ffmpeg
+brew install gh
 git clone git@github.com:rupa/z.git ~/z
 sh ~/dotfiles/vim/install.sh
 

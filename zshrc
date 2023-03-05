@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 alias ctags="`brew --prefix`/bin/ctags"
 alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
 alias vi='nvim'
-alias gh='cd $(ghq list -p | peco)'
+alias gl='cd $(ghq list -p | peco)'
 alias gho='gh-open $(ghq list -p | peco)'
 alias psgrep='ps aux | grep'
 function find_cd() {
