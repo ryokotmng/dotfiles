@@ -1,17 +1,12 @@
 # Ryoko's dotfiles
 ## Installation
 ### Getting Started
-Recommended prerequisites
+#### Recommended prerequisites
 - Oh my zsh
   - change shell to zsh after installation
+
+#### Required prerequisites
 - Homebrew (visit website to find how to install)
-- Git tools
-```
-$ brew install git
-$ git config --global user.name "USER_NAME"
-$ git config --global user.email email@example.com
-$ git config --global tag.sort version:refname
-```
 
 Clone dotfiles by using git.
 ```
