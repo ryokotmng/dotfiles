@@ -22,12 +22,6 @@ repo = 'jparise/vim-graphql'
 #=================================
 # basic
 #=================================
-[[plugins]]
-repo = 'Shougo/defx.vim'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git.vim'
-
 # make table
 [[plugins]]
 repo = 'mattn/vim-maketable'
