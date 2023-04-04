@@ -10,6 +10,7 @@ brew install neovim
 brew install asdf
 brew install ffmpeg
 brew install gh
+brew install direnv
 git clone git@github.com:rupa/z.git ~/z
 sh ~/dotfiles/vim/install.sh
 
