@@ -13,4 +13,6 @@ ln -snfv $DOT_DIRECTORY/vim/vimrc $DOT_CONFIG_DIRECTORY/nvim/init.vim
 ln -snfv $DOT_DIRECTORY/vim/vimrc $HOME/.vimrc
 ln -snfv $DOT_DIRECTORY/idea/ideavimrc $HOME/.ideavimrc
 
+cp -r $DOT_DIRECTORY/vim/dein $HOME/.vim
+
 echo "linked .zshprofile and zshrc complete!"

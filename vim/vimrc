@@ -36,6 +36,10 @@ let g:winresizer_horiz_resize = 1
 "------------------------------------------------------
 "dein
 "------------------------------------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
 let $CACHE = expand('~/.cache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')
@@ -50,6 +54,33 @@ if &runtimepath !~# '/dein.vim'
   endif
   execute 'set runtimepath^=' .. substitute(
         \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
+endif
+
+set runtimepath+=$HOME/.vim/dein/repos/github.com/Shougo/dein.vim   "★ 新パスに書き換え
+let s:dein_dir = expand($HOME . '/.vim/dein')   "★ 追記
+
+" Required:
+call dein#begin(s:dein_dir)   "★ 新パスに書き換え
+
+" Let dein manage dein
+" Required:
+call dein#add(s:dein_dir . '/repos/github.com/Shougo/dein.vim')   "★ 新パスに書き換え
+
+" LoadTomlFile:
+let s:toml = s:dein_dir . '/dein.toml'
+call dein#load_toml(s:toml, {'lazy': 0})
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+" syntax on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
 endif
 
 " neovim ----------

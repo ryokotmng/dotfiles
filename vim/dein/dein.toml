@@ -22,6 +22,12 @@ repo = 'jparise/vim-graphql'
 #=================================
 # basic
 #=================================
+[[plugins]]
+repo = 'Shougo/defx.vim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git.vim'
+
 # make table
 [[plugins]]
 repo = 'mattn/vim-maketable'
@@ -38,9 +44,6 @@ repo = 'cocopon/iceberg.vim'
 repo = 'vim-jp/vimdoc-ja'
 
 [[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
 repo = 'thinca/vim-themis'
 
 [[plugins]]
@@ -51,12 +54,6 @@ repo = 'tyru/open-browser-github.vim'
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
 
 [[plugins]]
 repo = 'peitalin/vim-jsx-typescript'
