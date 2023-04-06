@@ -6,6 +6,9 @@ if [[ ! -e $DOT_CONFIG_DIRECTORY ]]; then
   mkdir -p $DOT_CONFIG_DIRECTORY
 fi
 
+ln -snfv $DOT_DIRECTORY/gitignore $HOME/.gitignore
+git config --global core.excludesfile $HOME/.gitignore
+
 ln -snfv $DOT_DIRECTORY/zprofile $HOME/.zprofile
 ln -snfv $DOT_DIRECTORY/zshrc $HOME/.zshrc
 ln -snfv $DOT_DIRECTORY/tigrc $HOME/.tigrc
