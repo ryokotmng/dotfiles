@@ -24,7 +24,8 @@ nnoremap H ^
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gb :action JumpToLastChange<CR>
+nnoremap g; :<C-u>action JumpToLastChange<CR>
+nnoremap g, :<C-u>action JumpToNextChange<CR>
 nnoremap gm :action GotoModel<CR>
 nnoremap gc :action GotoController<CR>
 nnoremap gt :action GotoTest<CR>
@@ -70,3 +71,4 @@ nnoremap <Space>S :<C-u>action GotoSymbol<CR>
 nnoremap <Space>t :<C-u>action ActivateTerminalToolWindow<CR>
 nnoremap <Space>P :<C-u>action ManageRecentProjects<CR>
 nnoremap <Space>b :<C-u>action ToggleLineBreakpoint<CR>
+nnoremap <Space>d :<C-u>action Debug<CR>
