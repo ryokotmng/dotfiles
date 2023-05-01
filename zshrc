@@ -159,6 +159,7 @@ alias vim='nvim'
 alias mov2gif='(){ ffmpeg -i $1.mov -r 10 $1.gif }'
 alias vimrc='vi ~/dotfiles/vim/vimrc'
 alias zshrc='vi ~/dotfiles/zshrc'
+alias gho='source ~/dotfiles/open_github.sh'
 
 # ブランチを簡単切り替え。git checkout lbで実行できる
 alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
