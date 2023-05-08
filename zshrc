@@ -171,11 +171,5 @@ alias de='docker exec -it $(docker ps | peco | cut -d " " -f 1) /bin/bash'
 # rupa/z用 よく使うフォルダに移動する
 source ~/z/z.sh
 
-# Python用
-eval "$(direnv hook zsh)"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # for Node.js
 export PATH="$HOME/.nodenv/shims:$PATH"
