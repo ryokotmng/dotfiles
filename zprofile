@@ -62,3 +62,5 @@ function update_node_path(){
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd update_node_path
 
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

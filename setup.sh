@@ -2,6 +2,7 @@
 
 echo "Setup start!"
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install pyenv && brew install pyenv-virtualenv
 brew install node
 
