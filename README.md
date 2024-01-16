@@ -25,15 +25,5 @@ If dein doesn't work properly, open vim and install dein
 ```
 
 ### Install neovim
-Python2 and Python3 needed.
-```
-$ mkdir ~/.config/nvim
-see [this](https://qiita.com/yuku_t/items/6db331e7084f88b43fe4) for Python setup.
-$ pyenv install 2.7.13
-$ pyenv virtualenv 2.7.13 neovim-2
-```
-Create fle link to use neovim
-```
-$ ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
-```
+Python2 and Python3 needed. see [this](https://qiita.com/yuku_t/items/6db331e7084f88b43fe4) for Python setup.
 Please check ':CheckHealth' if something wrong.
