@@ -173,3 +173,9 @@ source ~/z/z.sh
 
 # for Node.js
 export PATH="$HOME/.nodenv/shims:$PATH"
+
+#個人で使う用のアカウント
+function gitPri() {
+  git config --global user.name "ryokotmng"
+  git config --global user.email "ryokotmng@gmail.com"
+}
