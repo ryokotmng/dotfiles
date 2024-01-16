@@ -16,6 +16,7 @@ pyenv install 2.7.13
 pyenv virtualenv 2.7.13 neovim-2
 ln -sf ~/dotfiles/vim/vimrc ~/.config/nvim/init.vim
 
+brew install git
 brew install lazygit
 brew install tree
 brew install fzf
