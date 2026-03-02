@@ -92,9 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ctags="`brew --prefix`/bin/ctags"
-alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
-alias vi='nvim'
+# peco
 alias gl='cd $(ghq list -p | peco)'
 alias gho='gh-open $(ghq list -p | peco)'
 alias psgrep='ps aux | grep'
@@ -155,11 +153,15 @@ zle -N peco-cdr
 bindkey '^x' peco-cdr
 
 
+alias ctags="`brew --prefix`/bin/ctags"
+alias ct='/usr/local/bin/ctags --tag-relative --recurse --sort=yes  --append=no -f .git/tags'
+alias vi='nvim'
 alias vim='nvim'
 alias mov2gif='(){ ffmpeg -i $1.mov -r 10 $1.gif }'
 alias vimrc='vi ~/dotfiles/vim/vimrc'
 alias zshrc='vi ~/dotfiles/zshrc'
 alias gho='source ~/dotfiles/open_github.sh'
+alias goland='open -a GoLand .'
 
 # ブランチを簡単切り替え。git checkout lbで実行できる
 alias -g lb='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
